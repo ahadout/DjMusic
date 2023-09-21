@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import HardDrives from './pages/HardDrives/HardDrives';
+import CloudDrives from './pages/CloudDrives/CloudDrives';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/hard-drives",
     element: <HardDrives />,
+  },
+  {
+    path: "/cloud-drives",
+    element: <CloudDrives />,
   },
 ]);
 

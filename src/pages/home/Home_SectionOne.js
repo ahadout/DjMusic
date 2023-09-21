@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../assets/css/style.css'
 
-function SectionOne() {
+function Home_SectionOne() {
   return (
     <>
         <div className="container">
@@ -22,4 +22,4 @@ function SectionOne() {
   )
 }
 
-export default SectionOne
+export default Home_SectionOne
