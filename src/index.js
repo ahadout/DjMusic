@@ -6,7 +6,8 @@ import HardDrives from "./pages/HardDrives/HardDrives";
 import CloudDrives from "./pages/CloudDrives/CloudDrives";
 import Screenshots from "./pages/Screenshots/Screenshots";
 import Preview from "./pages/Preview/Preview";
-import About from "./pages/About/About"
+import About from "./pages/About/About";
+import Login from "./pages/Login/Login";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -33,6 +34,14 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <Login />,
   },
 ]);
 
