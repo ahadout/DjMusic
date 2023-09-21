@@ -1,13 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import { Link } from "react-router-dom";
-import '../assets/css/style.css'
 
 function Header() {
   return (
     <header className="header-container">
         {/* Logo */}
         <div className="logo">
-          LOGO
+        <Link to="/">LOGO</Link>
         </div>
 
         {/* Navigation Menu */}
