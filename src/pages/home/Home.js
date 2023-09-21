@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import SectionOne from './SectionOne'
 import Header from '../../components/Header'
 
-function HomePage() {
+function Home() {
   return (
     <>
         <Header />
@@ -11,4 +11,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default Home
