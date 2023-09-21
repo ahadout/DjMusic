@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from '../../components/Header'
 
-function Screenshots() {
+function About() {
   return (
     <>
         <Header />
-        <div><h1>Screenshots</h1></div>
+        <div><h1>About</h1></div>
     </>
   )
 }
 
-export default Screenshots
+export default About
