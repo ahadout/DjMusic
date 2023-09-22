@@ -1,6 +1,13 @@
 import React from "react";
 import "../assets/css/Footer.css";
 import logo from "../assets/images/djmusic_logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faYoutube,
+  faBehance,
+  faTumblr,
+} from "@fortawesome/free-brands-svg-icons";
 function Footer() {
   return (
     <footer>
@@ -8,10 +15,18 @@ function Footer() {
         <div id="logo_social_media-footer">
           <img src={logo} class="logo-footer" />
           <div class="social_media-footer">
-            <i></i>
-            <i></i>
-            <i></i>
-            <i></i>
+            <i>
+              <FontAwesomeIcon icon={faFacebook} />
+            </i>
+            <i>
+              <FontAwesomeIcon icon={faYoutube} />
+            </i>
+            <i>
+              <FontAwesomeIcon icon={faBehance} />
+            </i>
+            <i>
+              <FontAwesomeIcon icon={faTumblr} />
+            </i>
           </div>
         </div>
         <div id="join_us-footer">

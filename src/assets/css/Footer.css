@@ -32,7 +32,20 @@ footer {
   justify-items: center;
   align-items: center;
 }
-
+#logo_social_media-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#logo_social_media-footer i {
+  display: inline-block;
+  margin: 0.5rem 0.25rem;
+}
+#logo_social_media-footer i svg {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
 #join_us-footer div {
   display: flex;
   justify-content: center;
@@ -78,9 +91,12 @@ footer {
 .logo-footer {
   height: 120px;
   margin-top: 60px;
+  width: 80%;
+  max-width: 480px;
+  height: 40px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   * {
     font-size: 0.9rem;
   }
