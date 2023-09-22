@@ -23,6 +23,7 @@
 
 .nav-menu{
     display: flex;
+	align-items: center;
     gap: 20px; /* spacing between links */
 }
 .nav-link{
@@ -56,7 +57,8 @@
 	border: none;
 	outline: none;
 	color: white;
-	visibility: hidden;
+	/* visibility: hidden; */
+	display: none;
 	opacity: 0;
 	font-size: 1.8rem;
 }
@@ -64,8 +66,18 @@
 /* Responsive styling */
 @media only screen and (max-width: 1024px) {
     .nav-btn {
-		visibility: visible;
+		/* visibility: visible; */
+		display: block;
 		opacity: 1;
+	}
+
+	.header-container{
+		padding: 0.6rem 1rem;
+	}
+
+	.logo img{
+		width: 8rem;
+		height: 2rem;
 	}
 
     .header-container .nav-menu{
@@ -83,7 +95,7 @@
 		transition: 1s;
 	}
 
-    .responsive_nav {
+    .responsive-nav {
 		transform: translateY(100vh);
 	}
 
@@ -93,7 +105,21 @@
 		right: 2rem;
 	}
 
-    .nav-menu-item{
-		font-size: 1.5rem;
+    .nav-link{
+		font-size: 1.2rem;
+	}
+
+	.auth-links{
+		display: none;
+	}
+	
+	.divider{
+		width: 100%;
+		border-top: 1px solid grey;
+	}
+	.signup-link{
+		background-color: white;
+		color: black;
+		padding: 0.5rem 5rem;
 	}
 }

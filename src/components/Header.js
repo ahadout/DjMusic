@@ -9,7 +9,7 @@ function Header() {
   const navRef = useRef();
 
   const showNavBar = () => {
-    navRef.current.classList.toggle("responsive_nav");
+    navRef.current.classList.toggle("responsive-nav");
   }
   
   return (
@@ -21,12 +21,15 @@ function Header() {
 
         {/* Navigation Menu */}
         <nav ref={navRef} className="nav-menu">
-          <Link className='nav-menu-item nav-link' to="/">Home</Link>
-          <Link className='nav-menu-item nav-link' to="/hard-drives">Hard drives</Link>
-          <Link className='nav-menu-item nav-link' to="/cloud-drives">Cloud drives</Link>
-          <Link className='nav-menu-item nav-link' to="/screenshots">Screenshots</Link>
-          <Link className='nav-menu-item nav-link' to="/preview">Preview</Link>
-          <Link className='nav-menu-item nav-link' to="/about">About</Link>
+          <Link className='nav-link' to="/">Home</Link>
+          <Link className='nav-link' to="/hard-drives">Hard drives</Link>
+          <Link className='nav-link' to="/cloud-drives">Cloud drives</Link>
+          <Link className='nav-link' to="/screenshots">Screenshots</Link>
+          <Link className='nav-link' to="/preview">Preview</Link>
+          <Link className='nav-link' to="/about">About</Link>
+          <span className='nav-btn divider'></span>
+          <Link className='nav-link nav-btn' to="/login">Login</Link>
+          <Link className='nav-link nav-btn signup-link' to="/signup">Sign Up</Link>
           <button className="nav-btn nav-close-btn" onClick={showNavBar}><FontAwesomeIcon icon={faXmark} /></button>
         </nav>
 
@@ -35,7 +38,7 @@ function Header() {
         {/* Login and Sign Up */}
         <div className="auth-links">
           <Link className='nav-link' to="/login">Login</Link>
-          <Link to="/signup" className="signup-link nav-link">Sign Up</Link>
+          <Link className="signup-link nav-link" to="/signup">Sign Up</Link>
         </div>
     </header>
   )

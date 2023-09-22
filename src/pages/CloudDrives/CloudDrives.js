@@ -6,7 +6,7 @@ function CloudDrives() {
   return (
     <>
         <Header />
-        <div style="height: 100vh;"><h1>CloudDrives</h1></div>
+        <div><h1>CloudDrives</h1></div>
         <Footer />
     </>
   )
