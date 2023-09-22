@@ -1,6 +1,10 @@
 /* Root colors ( variables )  */
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap'); /* Gotu font family */
+
 :root {
   --bg-primary-color: #000000;
   --primary-color: #004eeb;
   --secondary-color: #ffffff;
+  --font-family: "gotu";
+  --font-weight-bold: 700;
 }

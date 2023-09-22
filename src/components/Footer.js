@@ -1,11 +1,12 @@
 import React from "react";
 import "../assets/css/Footer.css";
+import logo from "../assets/images/djmusic_logo.png";
 function Footer() {
   return (
     <footer>
       <div class="container">
         <div id="logo_social_media-footer">
-          <img src="../assets/images/logo.png" class="logo-footer" />
+          <img src={logo} class="logo-footer" />
           <div class="social_media-footer">
             <i></i>
             <i></i>
