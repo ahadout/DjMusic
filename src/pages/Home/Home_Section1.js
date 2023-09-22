@@ -4,14 +4,20 @@ import "../../assets/css/Home/Home_Section1.css";
 function Home_Section1() {
   return (
     <>
-      <div className="section">
-            <div className="box">
-                <h1>Big Heading</h1>
-                <p>Some small text here...</p>
-                <button className="black-btn">Button 1</button>
-                <button className="transparent-btn">Button 2</button>
-            </div>
+      <div className='Home-Section1-container'>
+        <div className='box'>
+          <div>
+            <h1>MUSIC 4 DJS MADE BY DJS</h1>
+          </div>
+          <div>
+            <p>Discover, Preview, and Own Your Favourite Beats!</p>
+          </div>
+          <div>
+            <button>Get Started</button>
+            <button>Learn More</button>
+          </div>
         </div>
+      </div>
     </>
   )
 }

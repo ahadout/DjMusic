@@ -1,10 +1,13 @@
 /* Root colors ( variables )  */
 @import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap'); /* Gotu font family */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap'); /* Bebas Neue + Roboto */
+
 
 :root {
   --bg-primary-color: #000000;
   --primary-color: #004eeb;
   --secondary-color: #ffffff;
-  --font-family: "gotu";
+  --font-family: "Roboto";
+  --heading-font-family: "Bebas Neue";
   --font-weight-bold: 600;
 }
