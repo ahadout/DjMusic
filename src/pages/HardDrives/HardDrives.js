@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react'
-import Header from '../../components/Header'
+import React, {useState, useEffect} from 'react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 function HardDrives() {
   return (
@@ -8,6 +9,7 @@ function HardDrives() {
         <div>
             <h1>this is a se=imulation of a hard drives page !!!</h1>
         </div>
+        <Footer />
     </>
   )
 }
