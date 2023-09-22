@@ -18,18 +18,22 @@
 }
 
 .logo img{
-    width: 10rem;
-    height: 2.5rem;
+	/* width: 180px; */
+	width: 80%;
+	min-width: 8rem;
+	max-width: 15rem;
+	height: 80%;
 }
 
 .nav-menu{
     display: flex;
 	align-items: center;
-    gap: 20px; /* spacing between links */
+    gap: 15px; /* spacing between links */
 }
 .nav-link{
     color: var(--secondary-color);
     text-decoration: none;
+	font-size: 1.2vw;
 	font-weight: var(--font-weight-bold);
     padding: 5px 10px;
     transition: 0.3s;
@@ -40,7 +44,8 @@
 
 .auth-links {
     display: flex;
-    gap: 6px; /* spacing between links */
+	align-items: center;
+    gap: 15px; /* spacing between links */
 }
 
 .signup-link {
@@ -65,8 +70,18 @@
 	font-size: 1.8rem;
 }
 
-/* Responsive styling */
-@media only screen and (max-width: 1024px) {
+/* Small screens Responsive */
+@media screen and (min-width: 481px) and (max-width: 1024px){
+	.nav-menu{
+		gap: 5px;
+	}
+	.auth-links{
+		gap: 5px;
+	}
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 480px) {
     .nav-btn {
 		/* visibility: visible; */
 		display: block;
