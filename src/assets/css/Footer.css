@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
+
+/* Root colors ( variables )  */
+:root {
+  --bg-primary-color: #000000;
+  --primary-color: #004eeb;
+  --secondary-color: #ffffff;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Inria Sans", sans-serif;
+}
+footer {
+  background-color: var(--bg-primary-color);
+  color: var(--secondary-color);
+}
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(2, minmax(fit-content, 1fr));
+  justify-items: center;
+  align-items: center;
+}
+
+#join_us-footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#join_us-footer p {
+  font-size: 2rem;
+  margin: 0 0 0.75rem 0;
+  text-align: center;
+}
+#join_us-footer label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #2b2b2b;
+}
+#join_us-footer input {
+  padding: 0.5rem 1rem;
+  min-width: auto;
+  width: 22rem;
+  margin-left: -3px;
+  border: none;
+  margin-bottom: 1px;
+  padding: 7px;
+}
+#pages-footer {
+  grid-column: 2/-1;
+  display: flex;
+  gap: 5rem;
+}
+#pages-footer ul {
+  list-style: none;
+}
+#pages-footer ul li {
+  text-align: center;
+}
+#pages-footer ul li a {
+  display: inline;
+  font-size: 1.2rem;
+}
+#pages-footer ul li:first-of-type {
+  margin-bottom: 1rem;
+}
+.logo-footer {
+  height: 120px;
+  margin-top: 60px;
+}
+
+@media (max-width: 1000px) {
+  * {
+    font-size: 0.9rem;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, minmax(fit-content, 1fr));
+  }
+
+  #join_us-footer {
+    grid-row: 2/3;
+    margin: 0.5rem 0;
+  }
+
+  #pages-footer {
+    grid-column: 1/2;
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  * {
+    font-size: 0.75rem;
+  }
+  #pages-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 1rem 0;
+  }
+  #pages-footer ul li:first-of-type {
+    margin-bottom: 0;
+  }
+  #pages-footer ul {
+    margin-bottom: 1rem;
+  }
+  #pages-footer ul li a {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+  }
+}
