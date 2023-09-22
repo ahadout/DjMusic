@@ -7,14 +7,14 @@ function Home_Section1() {
       <div className='Home-Section1-container'>
         <div className='box'>
           <div>
-            <h1>MUSIC 4 DJS MADE BY DJS</h1>
+            <h1>MUSIC<br></br> 4 DJS MADE<br></br> BY DJS</h1>
           </div>
           <div>
-            <p>Discover, Preview, and Own Your Favourite Beats!</p>
+            <p>Discover, Preview, and<br></br>Own Your Favourite Beats!</p>
           </div>
-          <div>
-            <button>Get Started</button>
-            <button>Learn More</button>
+          <div className='Home-Section1-box-btn-container'>
+            <button className='Home-Section1-box-btn'>Get Started</button>
+            <button className='Home-Section1-box-btn'>Learn More</button>
           </div>
         </div>
       </div>
