@@ -1,0 +1,56 @@
+@import "../Home/Home_Section1.css";
+
+.section {
+    width: 100vw;
+    height: 85vh;
+    background-image: url('../../images/dj-playing-in-nightclub.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.box {
+    width: 30%;
+    height: 70%;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -10%;
+    right: 10%;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+button {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.black-btn {
+    background-color: black;
+    color: white;
+}
+
+.transparent-btn {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+}
+
+.transparent-btn:hover {
+    background-color: black;
+    color: white;
+}
