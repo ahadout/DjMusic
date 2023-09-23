@@ -3,7 +3,7 @@ import "../../assets/css/Home/Home_Section4.css";
 import Sandik2tbSolidDisk from "../../assets/images/Sandisk 2tb solid state.png";
 function Home_Section4() {
   return (
-    <div class="home_section4_container">
+    <div id="home_section4_container">
       <section id="home_section4">
         <div id="product_card">
           <div class="product_card_circle"></div>
@@ -27,7 +27,7 @@ function Home_Section4() {
             <button>-</button>
           </div>
           <button>ADD TO CART</button>
-          <button>BUY</button>
+          <button>BUY NOW</button>
         </div>
       </section>
     </div>
