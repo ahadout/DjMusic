@@ -1,12 +1,3 @@
-* {
-  font-family: var(--font-family);
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: black;
-}
 #home_section4_container {
   background-image: url("../../images/home_section2_bg.png");
   object-fit: cover;
@@ -135,5 +126,8 @@ body {
   #product_card img {
     bottom: 13.3rem;
     left: 5.5rem;
+  }
+  #home_section4_container {
+    padding-bottom: 0;
   }
 }

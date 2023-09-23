@@ -11,3 +11,12 @@
   --heading-font-family: "Bebas Neue";
   --font-weight-bold: 600;
 }
+* {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--bg-primary-color);
+}

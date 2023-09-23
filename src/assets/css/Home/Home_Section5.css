@@ -1,0 +1,121 @@
+#Home_section5 {
+  color: white;
+  width: 90%;
+  margin: -3.5rem auto 5rem auto;
+}
+#Home_section5 h1 {
+  font-size: 2.5rem;
+}
+#Home_section5 > p:first-of-type {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+#Home_section5 > hr {
+  margin-bottom: 1rem;
+  color: white;
+}
+#Home_section5_main {
+  display: flex;
+  justify-content: space-between;
+}
+#Home_section5_main span {
+  display: block;
+}
+#Home_section5_main audio {
+  background-color: white;
+  border-radius: 2%;
+  width: 75%;
+}
+#Home_section5_main_categories {
+  width: 40%;
+}
+#Home_section5_main_categories hr {
+  width: 30%;
+  color: white;
+}
+#Home_section5_main_categories hr:first-of-type {
+  width: 35%;
+}
+#Home_section5_main_categories hr:first-of-type {
+  display: inline-block;
+}
+#Home_section5_main_categories h2 {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 900;
+  margin: 0.5rem 0;
+}
+#Home_section5_main_categories p {
+  font-size: 1.1rem;
+  margin: 0.75rem 0;
+}
+#Home_section5_main div:nth-of-type(2) {
+  justify-self: flex-end;
+}
+
+#Home_section5_main > div:nth-of-type(2) {
+  width: 80%;
+}
+#Home_section5_main div:nth-of-type(2) h2 {
+  margin: 0.5rem 0;
+}
+#Home_section5_main div:nth-of-type(2) hr {
+  width: 20%;
+  margin: 0.5rem 0;
+}
+#Home_section5_main div:nth-of-type(2) p,
+#Home_section5_main div:nth-of-type(2) span {
+  margin: 0.5rem 0;
+}
+#Home_section5_main div:nth-of-type(2) p {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+#Home_section5_main div:nth-of-type(2) span {
+  font-size: 0.8rem;
+}
+@media (max-width: 1000px) {
+  #Home_section5 {
+    max-width: 700px;
+  }
+}
+@media (max-width: 720px) {
+  #Home_section5 {
+    margin: 0;
+  }
+  #Home_section5 h1,
+  #Home_section5 p {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  #Home_section5_main {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  #Home_section5_main hr {
+    margin: 0rem auto 0.25rem auto;
+  }
+  #Home_section5_main_categories {
+    width: auto;
+  }
+  #Home_section5_main div:nth-of-type(2) {
+    text-align: center;
+  }
+  #Home_section5_main div:nth-of-type(2) hr {
+    margin: 0 auto;
+  }
+  #Home_section5_main div:nth-of-type(2) h2 {
+    margin-top: 1.5rem;
+  }
+  #Home_section5_main_categories h2 {
+    font-size: 1.5rem;
+  }
+  #Home_section5 > hr {
+    margin: 1.5rem;
+  }
+  #Home_section5_main > div:nth-of-type(2) div {
+    margin: 1.25rem 0;
+  }
+}
