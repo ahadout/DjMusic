@@ -1,0 +1,142 @@
+* {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+#home_section2 {
+  background-color: black;
+  color: white;
+  margin: 0 auto;
+}
+#home_section2 > h1 {
+  padding-top: 2rem;
+  font-size: 3rem;
+}
+#home_section2 > h1,
+#home_section2 > p {
+  text-align: center;
+}
+#home_section2 > p {
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+  padding: 1rem;
+}
+.plans {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+  justify-items: center;
+  align-items: center;
+}
+.hard_drives-plan img,
+.cloud_drives-plan img {
+  width: 500px;
+  height: 500px;
+  margin-bottom: 5rem;
+}
+.hard_drives-plan,
+.cloud_drives-plan {
+  position: relative;
+}
+.hard_drives-info,
+.cloud_drives-info {
+  padding: 1rem;
+  width: 425px;
+  height: 160px;
+  background-color: #004eeb;
+  display: flex;
+  color: white;
+  position: absolute;
+  top: 25rem;
+  left: 2.2rem;
+  z-index: 50;
+}
+.hard_drives-info h2,
+.cloud_drives-info h2 {
+  flex-basis: 85%;
+}
+.hard_drives-info hr,
+.cloud_drives-info hr {
+  margin-right: 1rem;
+  border: 1px solid white;
+}
+.hard_drives-info p,
+.cloud_drives-info p {
+  display: inline-block;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.hard_drives-info button,
+.cloud_drives-info button {
+  border: none;
+  color: white;
+  background-color: black;
+  padding: 0.6rem 0.8rem;
+}
+@media (max-width: 720px) {
+  .plans {
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
+  .hard_drives-plan img,
+  .cloud_drives-plan img {
+    width: 380px;
+    height: 380px;
+    margin-bottom: 5rem;
+  }
+  .hard_drives-info h2,
+  .cloud_drives-info h2 {
+    font-size: 0.75rem;
+  }
+  .hard_drives-info,
+  .cloud_drives-info {
+    font-size: 0.75rem;
+    padding: 1rem;
+    width: 275px;
+    height: 115px;
+    top: 20rem;
+    left: 3.3rem;
+    z-index: 50;
+  }
+  .hard_drives-info p,
+  .cloud_drives-info p {
+    margin-bottom: 0.75rem;
+  }
+  .hard_drives-info button,
+  .cloud_drives-info button {
+    font-size: 0.6rem;
+    border: none;
+    color: white;
+    background-color: black;
+    padding: 0.4rem 0.6rem;
+  }
+}
+@media (max-width: 480px) {
+  #home_section2 > p {
+    font-size: 0.9rem;
+    margin: 0.5rem auto 1.5rem auto;
+    width: 90%;
+  }
+  .plans {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  .hard_drives-plan img,
+  .cloud_drives-plan img {
+    width: 300px;
+    height: 300px;
+  }
+  .hard_drives-info,
+  .cloud_drives-info {
+    font-size: 0.6rem;
+    padding: 1rem;
+    width: 220px;
+    height: 110px;
+    top: 15rem;
+    left: 2.6rem;
+    z-index: 50;
+  }
+}

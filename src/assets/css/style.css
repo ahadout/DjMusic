@@ -1,7 +1,7 @@
 /* Root colors ( variables )  */
-@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap'); /* Gotu font family */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap'); /* Bebas Neue + Roboto */
-
+@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap"); /* Gotu font family */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+/* Bebas Neue + Roboto */
 
 :root {
   --bg-primary-color: #000000;
