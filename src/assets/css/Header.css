@@ -71,7 +71,7 @@
 }
 
 /* Small screens Responsive */
-@media screen and (min-width: 769px) and (max-width: 1024px){
+@media screen and (min-width: 721px) and (max-width: 1024px){
 	.nav-menu{
 		gap: 5px;
 	}
@@ -81,7 +81,7 @@
 }
 
 /* Mobile Responsive */
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 720px){
     .nav-btn {
 		/* visibility: visible; */
 		display: block;
