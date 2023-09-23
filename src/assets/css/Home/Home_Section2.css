@@ -127,7 +127,6 @@ body {
   .plans {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
-
   .hard_drives-plan img,
   .cloud_drives-plan img {
     width: 300px;
