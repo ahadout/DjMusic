@@ -47,12 +47,12 @@ body {
 .cloud_drives-info {
   padding: 1rem;
   width: 425px;
-  height: 160px;
+  height: 180px;
   background-color: #004eeb;
   display: flex;
   color: white;
   position: absolute;
-  top: 25rem;
+  top: 18rem;
   left: 2.2rem;
   z-index: 50;
 }
@@ -70,6 +70,7 @@ body {
   display: inline-block;
   font-weight: 500;
   margin-bottom: 2rem;
+  line-height: 1.65rem;
 }
 .hard_drives-info button,
 .cloud_drives-info button {
@@ -82,6 +83,7 @@ body {
   .plans {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   }
+
   .hard_drives-plan img,
   .cloud_drives-plan img {
     width: 380px;
@@ -98,13 +100,14 @@ body {
     padding: 1rem;
     width: 275px;
     height: 115px;
-    top: 20rem;
+    top: 15.5rem;
     left: 3.3rem;
     z-index: 50;
   }
   .hard_drives-info p,
   .cloud_drives-info p {
     margin-bottom: 0.75rem;
+    line-height: 1rem;
   }
   .hard_drives-info button,
   .cloud_drives-info button {
@@ -124,6 +127,7 @@ body {
   .plans {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
+
   .hard_drives-plan img,
   .cloud_drives-plan img {
     width: 300px;
@@ -133,10 +137,10 @@ body {
   .cloud_drives-info {
     font-size: 0.6rem;
     padding: 1rem;
-    width: 220px;
-    height: 110px;
-    top: 15rem;
-    left: 2.6rem;
+    width: 249px;
+    height: 107px;
+    top: 11rem;
+    left: 1.5rem;
     z-index: 50;
   }
 }
