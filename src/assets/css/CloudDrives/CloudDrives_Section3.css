@@ -1,0 +1,101 @@
+#CloudDrives_Section3 {
+  background-color: var(--primary-color);
+  background-image: url("../../images/music_bg.png");
+  display: flex;
+  flex-direction: column;
+}
+#CloudDrives_Section3 h1 {
+  text-align: center;
+  margin: 4rem 0 0.25rem 0;
+  font-size: 4rem;
+  color: white;
+}
+#CloudDrives_Section3 > p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+.CloudDrives_Section3_Grid {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17rem, 22rem));
+  padding: 2rem 0 5rem 0;
+  align-items: center;
+  place-items: center;
+  place-content: center;
+}
+.CloudDrives_Section3_ProductCard_Container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+/* Modifying the product card component */
+.CloudDrives_Section3_ProductCard_img {
+  width: 17rem;
+  bottom: 12.5rem;
+  left: -0.25rem;
+}
+/* Modifying the product cards components in Cloud Drives section 3 */
+.ProductCard_CloudDrives_Section3 {
+  background-color: black !important;
+  width: 16rem !important;
+  height: 26rem !important;
+}
+.ProductCard_CloudDrives_Section3 > div:first-of-type {
+  width: 11rem !important;
+  height: 11rem !important;
+}
+.ProductCard_CloudDrives_Section3 p {
+  font-size: 1.2rem !important;
+  margin: 0 1rem !important;
+}
+/* END */
+.CloudDrives_Section3_Container {
+  width: 90%;
+  max-width: 1200px;
+}
+.CloudDrives_Section3_AddToCartOrBuy {
+  align-items: center;
+}
+.CloudDrives_Section3_AddToCartOrBuy div button {
+  background-color: var(--primary-color);
+}
+
+.CloudDrives_Section3_AddToCartOrBuy > button:first-of-type {
+  border: none !important;
+}
+.CloudDrives_Section3_AddToCartOrBuy > button {
+  height: 3rem !important;
+}
+#CloudDrives_Section3_ProductCard_ShowMore button:first-of-type {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: none;
+  color: #d0d0d0;
+  border: 1px solid #d0d0d0;
+  background-color: #004eeb;
+  font-size: 6rem;
+  cursor: pointer;
+}
+#CloudDrives_Section3_ProductCard_ShowMore button:nth-of-type(2) {
+  border: none;
+  padding: 0.5rem 1rem;
+  display: block;
+  color: #d0d0d0;
+  background: transparent;
+  font-size: 1.1rem;
+  margin: 0.75rem auto 2rem auto;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  .ProductCard_CloudDrives_Section3 p {
+    padding: 0 1rem;
+  }
+}

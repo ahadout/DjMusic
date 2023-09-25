@@ -1,0 +1,28 @@
+#product_card {
+  width: 23.125rem;
+  height: 32.5rem;
+  background-color: #004eeb;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+#product_card img {
+  position: absolute;
+}
+#product_card p {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-align: center;
+  margin-bottom: -2rem;
+}
+.product_card_circle {
+  height: 17rem;
+  width: 17rem;
+  background-color: #bbb;
+  border-radius: 50%;
+  background-color: white;
+}

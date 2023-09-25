@@ -1,0 +1,57 @@
+#AddToCartOrBuy {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: fit-content;
+  margin: 0 0 2rem 0;
+}
+
+#AddToCartOrBuy span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 1rem 0 0 0;
+}
+.product-count button {
+  border: none;
+  font-size: 1.75rem;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+}
+.product-count button:first-of-type {
+  margin-right: 0.5rem;
+}
+.product-count button:nth-of-type(2) {
+  margin-left: 0.5rem;
+}
+.product-count {
+  margin: 0.75rem 0;
+}
+.product-count p {
+  display: inline-block;
+  font-size: 1.75rem;
+  margin: 0 0.75rem;
+}
+#AddToCartOrBuy > button:nth-of-type(1) {
+  display: block;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  font-size: 1.25rem;
+  height: 2rem;
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+#AddToCartOrBuy > button:nth-of-type(2) {
+  background-color: #004eeb;
+  color: white;
+  border: none;
+  font-size: 1.25rem;
+  height: 2rem;
+  font-weight: 600;
+  width: 10rem;
+}

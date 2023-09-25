@@ -1,22 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
-
-/* Root colors ( variables )  */
-:root {
-  --bg-primary-color: #000000;
-  --primary-color: #004eeb;
-  --secondary-color: #ffffff;
-}
-body {
-  margin: 0;
-  padding: 0;
-}
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-family: "Inria Sans", sans-serif;
-}
 footer {
   background-color: var(--bg-primary-color);
   color: var(--secondary-color);
