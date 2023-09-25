@@ -1,19 +1,16 @@
 import React from "react";
 import "../../src/assets/css/Components/Newsletter.css";
-function Newsletter() {
+function Newsletter(props) {
   return (
-    <div id="Newsletter">
+    <div id="Newsletter" className={props.class}>
       <h1>Join us and get all our Updates!</h1>
-      <p>
-        Feel More fan and enjoy the favourite music with your best persones!
-      </p>
+      {props.description && <p>{props.description}</p>}
       <div>
         <label>Email</label>
         <input placeholder="Your Email Here" />
       </div>
-      <button>SEND</button>
+      {props.sentBtn && <button>{props.sentBtn}</button>}
     </div>
   );
 }
-
 export default Newsletter;

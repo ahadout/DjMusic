@@ -8,16 +8,16 @@ footer {
   margin: 0 auto;
   padding: 2rem 0;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: repeat(2, minmax(fit-content, 1fr));
-  justify-items: center;
-  align-items: center;
+  grid-template-columns: 2fr 3fr;
+  place-content: center;
+  place-items: center;
 }
 #logo_social_media-footer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-right: 4rem;
 }
 #logo_social_media-footer i {
   display: inline-block;
@@ -71,35 +71,44 @@ footer {
 .logo-footer {
   height: 120px;
   margin-top: 60px;
-  width: 80%;
   max-width: 480px;
   height: 40px;
 }
-
+/* This section for custom classes added when calling footer component */
+.Footer_Newsletter {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.Footer_Newsletter h1 {
+  font-size: 2rem !important;
+  font-family: var(--font-family) !important;
+}
+.Footer_Newsletter div > label {
+  background-color: #2b2b2b !important;
+}
+.Footer_Newsletter div > input {
+  height: 2rem !important;
+}
+/* End */
 @media (max-width: 768px) {
-  * {
-    font-size: 0.9rem;
-  }
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, minmax(fit-content, 1fr));
   }
-
   #join_us-footer {
     grid-row: 2/3;
     margin: 0.5rem 0;
   }
-
   #pages-footer {
     grid-column: 1/2;
     margin: 2rem 0;
   }
+  #logo_social_media-footer {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 480px) {
-  * {
-    font-size: 0.75rem;
-  }
   #pages-footer {
     display: flex;
     flex-direction: column;
@@ -115,5 +124,11 @@ footer {
   #pages-footer ul li a {
     display: inline-block;
     margin-bottom: 0.3rem;
+  }
+  #join_us-footer p {
+    font-size: 1rem;
+  }
+  #join_us-footer input {
+    width: 14rem;
   }
 }

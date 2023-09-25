@@ -8,11 +8,7 @@ function CloudDrives_Section1() {
     <>
       <section id="CloudDrives_Section1">
         <div class="CloudDrives_Section1_container">
-          <h1>
-            GET YOUR <br />
-            TB CLOUD DRIVE <br />
-            NOW!
-          </h1>
+          <h1>GET YOUR TB CLOUD DRIVE NOW!</h1>
           <div>
             <div id="solid_drives_sec1">
               <img src={CloudPic} alt="cloud picture" />

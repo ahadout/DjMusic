@@ -1,4 +1,7 @@
 #Newsletter {
+  width: 90%;
+  margin: 0 auto !important;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,15 +13,17 @@
 #Newsletter h1 {
   font-family: var(--heading-font-family);
   font-size: 4rem;
+  text-align: center;
+}
+#Newsletter > p {
+  margin-bottom: 1rem;
+  text-align: center;
 }
 #Newsletter div {
   margin: 2rem 0;
   display: grid;
   grid-template-columns: max-content 1fr;
   align-items: center;
-}
-#Newsletter > p {
-  margin-bottom: 1rem;
 }
 #Newsletter label {
   background-color: var(--primary-color);
@@ -36,7 +41,7 @@
   outline: none;
 }
 #Newsletter button {
-  padding: 0.75rem 2rem;
+  padding: 0.5rem 2rem;
   font-size: 1rem;
   font-weight: 500;
   background-color: var(--primary-color);
@@ -44,4 +49,23 @@
   border: none;
   outline: none;
   margin-top: -0.5rem;
+}
+@media (max-width: 480px) {
+  #Newsletter h1 {
+    font-size: 1.75rem;
+  }
+  #Newsletter > p {
+    font-size: 0.75rem;
+  }
+  #Newsletter div {
+    margin: 1rem 0 2rem 0;
+  }
+  #Newsletter div input {
+    width: fit-content;
+    height: 1rem;
+  }
+  #Newsletter button {
+    padding: 0.25rem 1rem;
+    font-size: 0.85rem;
+  }
 }

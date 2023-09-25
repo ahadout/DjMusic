@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/css/Footer.css";
+import Newsletter from "./Newsletter";
 import logo from "../assets/images/djmusic_logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -29,13 +30,14 @@ function Footer() {
             </i>
           </div>
         </div>
-        <div id="join_us-footer">
+        {/* <div id="join_us-footer">
           <p>Join us and get the all our Updates!</p>
           <div>
             <label for="">Email</label>
             <input id="email" placeholder="Your email here" />
           </div>
-        </div>
+        </div> */}
+        <Newsletter class="Footer_Newsletter" />
         <div id="pages-footer">
           <ul>
             <li>

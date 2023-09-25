@@ -77,22 +77,44 @@
   }
 }
 @media (max-width: 720px) {
+  .CloudDrives_Section1_container {
+    flex-direction: column;
+  }
+  #CloudDrives_Section1 > div img:nth-of-type(3) {
+    top: 10rem !important;
+  }
+  #solid_drives_sec1 {
+    bottom: 5rem;
+    margin-top: 2rem;
+  }
   #CloudDrives_Section1 h1 {
-    font-size: 4rem;
+    text-align: center;
+    font-size: 3rem;
+    width: 100%;
   }
   #CloudDrives_Section1 > div img {
-    width: 20rem;
+    width: 16rem;
   }
   #solid_drives_sec1 button {
-    font-size: 1.5rem;
-    left: 15.3%;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    left: 27%;
+    margin-top: 1rem;
+    z-index: 99;
   }
 }
 @media (max-width: 480px) {
+  #CloudDrives_Section1 {
+    height: 40rem;
+  }
   #CloudDrives_Section1 h1 {
     font-size: 3rem;
   }
-  #CloudDrives_Section1 {
-    height: 35rem;
+  #CloudDrives_Section1 > div img:nth-of-type(3) {
+    top: 10rem !important;
+  }
+  #solid_drives_sec1 {
+    bottom: 2rem;
+    margin-bottom: 0;
   }
 }
