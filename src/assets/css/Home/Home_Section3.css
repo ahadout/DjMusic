@@ -1,0 +1,79 @@
+.Home-Section3-container{
+    background-color: var(--primary-color);
+}
+
+.Home-Section3-second-container{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+}
+
+.Home-Section3-second-container .section3-left{
+    padding: 50px;
+    width: 100%;
+    color: white;
+}
+
+.Home-Section3-second-container .section3-left > *{
+    margin-bottom: 35px;
+}
+.section3-left-paragraph > *{
+    margin-bottom: 20px;
+}
+
+.Home-Section3-second-container .section3-left h1{
+    font-size: 42px;
+    text-align: center;
+}
+
+.Home-Section3-second-container .section3-left .mobile-image{
+    display: none;
+}
+
+.section3-left .order-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section3-left .order-button .order-here{
+    padding: 10px 20px;
+    color: var(--primary-color);
+    font-size: 28px;
+    font-family: var(--heading-font-family);
+    font-weight: var(--font-weight-bold);
+}
+.section3-right img{
+    height: 100%; /* Take full height of its container */
+    display: block; /* Remove default spacing below the image */
+    z-index: -1; /* Ensure the image stays below the content of section3-left */
+    width: 50vw;
+}
+
+@media screen and (max-width: 1024px){
+    .Home-Section3-second-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .Home-Section3-second-container .section3-left .mobile-image{
+        display: block;
+        width: 100%;
+    }
+
+    .section3-left .section3-left-paragraph{
+        text-align: center;
+    }
+
+    .section3-right img{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 720px){
+    .section3-left .order-button .order-here{
+        font-size: 24px;
+        padding: 5px 30px;
+    }
+}

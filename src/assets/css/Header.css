@@ -15,6 +15,7 @@
     padding: 0 3rem;
     color: var(--bg-primary-color);
     overflow: hidden;
+	z-index: 999;
 }
 
 .logo img{

@@ -4,16 +4,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* display: grid;
-    grid-template-rows: 10% 80% 10%;
-    grid-template-columns: 10% 80% 10%; */
 }
 .Home-Section1-second-container{
     width: 90%;
     margin: 0 auto;
     position: relative;
-    /* grid-column: 2/3;
-    grid-row: 2/3; */
 }
 
 .Home-Section1-container .box{
@@ -102,6 +97,7 @@
     }
 
     .Home-Section1-box-btn{
+        font-size: 1.2rem;
         width: 40%;
     }
 }
