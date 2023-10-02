@@ -1,5 +1,5 @@
 #home_section4_container {
-  background-image: url("../../images/home_section2_bg.png");
+  background-image: url("../../images/music_bg.png");
   object-fit: cover;
   background-size: contain;
   background-repeat: no-repeat;
@@ -12,37 +12,11 @@
   max-width: 1000px;
   margin: 5rem auto;
 }
-#product_card {
-  width: 370px;
-  height: 520px;
-  background-color: #004eeb;
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-}
-#product_card img {
-  position: absolute;
-  bottom: 12.4rem;
-  left: 5rem;
-  width: 50%;
-  height: 71%;
-}
-#product_card p {
-  color: white;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.6rem;
-  line-height: 2rem;
-  text-align: center;
-  margin-bottom: -2rem;
-}
-.product_card_circle {
-  height: 275px;
-  width: 275px;
-  background-color: #bbb;
-  border-radius: 50%;
-  background-color: white;
+.Home_Section4_ProductCard_img {
+  width: 11rem;
+  left: 5.5rem;
+  bottom: 12.5rem;
+  height: 22rem;
 }
 #product_buy_addtocart {
   color: white;
@@ -51,27 +25,22 @@
   margin-bottom: 2rem;
   font-size: 2.5rem;
 }
-.product-count {
-  margin: 0.75rem 0;
-}
+
 .product-count p {
   display: inline-block;
   font-size: 1.75rem;
   margin: 0 0.75rem;
+}
+#product_buy_addtocart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 #product_buy_addtocart span {
   display: block;
   font-size: 2rem;
   font-weight: 500;
   margin: 1rem 0;
-}
-.product-count button:first-of-type,
-.product-count button:nth-of-type(2) {
-  border: none;
-  font-size: 1.75rem;
-  background-color: black;
-  color: white;
-  font-weight: 600;
 }
 #product_buy_addtocart > button:nth-of-type(1) {
   display: block;
@@ -120,12 +89,11 @@
     gap: 1.5rem;
     text-align: center;
   }
+  #product_buy_addtocart {
+    align-items: center;
+  }
   #product_buy_addtocart > button:nth-of-type(1) {
     margin: 1rem auto 0.5rem auto;
-  }
-  #product_card img {
-    bottom: 13.3rem;
-    left: 5.5rem;
   }
   #home_section4_container {
     padding-bottom: 0;

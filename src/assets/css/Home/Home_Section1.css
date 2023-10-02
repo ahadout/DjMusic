@@ -1,44 +1,123 @@
 .Home-Section1-container{
     height: 85vh;
-    background-image: url('../../images/dj-playing-in-nightclub.jpg');
+    background-image: url("../../images/dj-playing-in-nightclub.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.Home-Section1-container {
+  height: 85vh;
+  background-image: url("../../images/dj-playing-in-nightclub.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .Home-Section1-second-container{
     width: 90%;
     margin: 0 auto;
     position: relative;
 }
+.Home-Section1-container{
+  height: 85vh;
+  background-image: url("../../images/dj-playing-in-nightclub.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.Home-Section1-second-container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
 
-.Home-Section1-container .box{
-    background-color: var(--primary-color);
+.Home-Section1-container .box {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  min-width: 30%;
+  padding: 2rem;
+  line-height: 6rem;
+  margin-left: auto;
+  position: absolute;
+  top: 1rem;
+  right: 0rem;
+}
+
+.Home-Section1-container .box h1 {
+  font-family: var(--heading-font-family);
+  font-size: 6rem;
+}
+.Home-Section1-container .box h1 .br-mobile {
+  display: none;
+}
+
+.Home-Section1-container .box p {
+  font-size: 24px;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  line-height: 2rem;
+}
+
+.Home-Section1-box-btn{
+  border: 2px solid black;
+  padding: 1rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  transition: background-color 0.5s ease;
+}
+
+.Home-Section1-box-btn:first-child{
+  background-color: black;
+  color: white;
+}
+.Home-Section1-box-btn:first-child:hover{
+  background-color: white;
+  color: black;
+}
+.Home-Section1-box-btn:nth-child(2){
+  background: transparent;
+}
+.Home-Section1-box-btn:nth-child(2):hover{
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .Home-Section1-container .box h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Home-Section1-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-    min-width: 30%;
-    padding: 2rem;
-    line-height: 6rem;
-    margin-left: auto;
-    position: absolute;
-    top: 1rem;
-    right: 0rem;
-}
-
-.Home-Section1-container .box h1{
-    font-family: var(--heading-font-family);
-    font-size: 6rem;
-}
-.Home-Section1-container .box h1 .br-mobile{
+    justify-content: end;
+    align-items: end;
+  }
+  .Home-Section1-container .box {
+    position: static;
+    width: 100%;
+  }
+  .Home-Section1-container .box h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  .Home-Section1-container .box h1 .br-desktop {
     display: none;
-}
+  }
+  .Home-Section1-container .box h1 .br-mobile {
+    display: block;
+  }
 
-.Home-Section1-container .box p{
-    font-size: 24px;
-    font-family: var(--font-family);
-    font-weight: var(--font-weight-bold);
-    line-height: 2rem;
+  .Home-Section1-box-btn {
+    width: 40%;
+  }
 }
 
 .Home-Section1-box-btn{

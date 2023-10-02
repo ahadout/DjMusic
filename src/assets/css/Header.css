@@ -1,10 +1,4 @@
 @import "./style.css";
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: var(--font-family), sans-serif;
-}
 
 .header-container{
     background-color: var(--bg-primary-color);
@@ -15,129 +9,128 @@
     padding: 0 3rem;
     color: var(--bg-primary-color);
     overflow: hidden;
-	z-index: 999;
 }
 
-.logo img{
-	/* width: 180px; */
-	width: 80%;
-	min-width: 8rem;
-	max-width: 15rem;
-	height: 80%;
+.logo img {
+  /* width: 180px; */
+  width: 80%;
+  min-width: 8rem;
+  max-width: 15rem;
+  height: 80%;
 }
 
-.nav-menu{
-    display: flex;
-	align-items: center;
-    gap: 15px; /* spacing between links */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* spacing between links */
 }
-.nav-link{
-    color: var(--secondary-color);
-    text-decoration: none;
-	font-size: 1.2vw;
-	font-weight: var(--font-weight-bold);
-    padding: 5px 10px;
-    transition: 0.3s;
+.nav-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: var(--font-weight-bold);
+  padding: 5px 10px;
+  transition: 0.3s;
 }
-.nav-link:hover{
-    opacity: 0.8;
+.nav-link:hover {
+  opacity: 0.8;
 }
 
 .auth-links {
-    display: flex;
-	align-items: center;
-    gap: 15px; /* spacing between links */
+  display: flex;
+  align-items: center;
+  gap: 15px; /* spacing between links */
 }
 
 .signup-link {
-    background-color: white;
-    color: black;
-    border-radius: 5px; /* rounded edges */
+  background-color: white;
+  color: black;
+  border-radius: 5px; /* rounded edges */
 }
 .signup-link:hover {
-    background-color: #f0f0f0; /* lighter gray on hover */
+  background-color: #f0f0f0; /* lighter gray on hover */
 }
 
 .nav-btn {
-	padding: 5px;
-	cursor: pointer;
-	background: transparent;
-	border: none;
-	outline: none;
-	color: white;
-	/* visibility: hidden; */
-	display: none;
-	opacity: 0;
-	font-size: 1.8rem;
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  /* visibility: hidden; */
+  display: none;
+  opacity: 0;
+  font-size: 1.8rem;
 }
 
 /* Small screens Responsive */
-@media screen and (min-width: 721px) and (max-width: 1024px){
-	.nav-menu{
-		gap: 5px;
-	}
-	.auth-links{
-		gap: 5px;
-	}
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+  .nav-menu {
+    gap: 5px;
+  }
+  .auth-links {
+    gap: 5px;
+  }
 }
 
 /* Mobile Responsive */
-@media only screen and (max-width: 720px){
-    .nav-btn {
-		/* visibility: visible; */
-		display: block;
-		opacity: 1;
-	}
+@media only screen and (max-width: 720px) {
+  .nav-btn {
+    /* visibility: visible; */
+    display: block;
+    opacity: 1;
+  }
 
-	.header-container{
-		padding: 0.6rem 1rem;
-	}
+  .header-container {
+    padding: 0.6rem 1rem;
+  }
 
-	.logo img{
-		width: 8rem;
-		height: 2rem;
-	}
+  .logo img {
+    width: 8rem;
+    height: 2rem;
+  }
 
-    .header-container .nav-menu{
-		position: fixed;
-		top: -100vh;
-		left: 0;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 0.8rem;
-		background-color: var(--bg-primary-color);
-		transition: 0.5s;
-	}
+  .header-container .nav-menu {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background-color: var(--bg-primary-color);
+    transition: 0.5s;
+  }
 
-    .responsive-nav {
-		transform: translateY(100vh);
-	}
+  .responsive-nav {
+    transform: translateY(100vh);
+  }
 
-    .nav-close-btn {
-		position: absolute;
-		top: 2rem;
-		right: 2rem;
-	}
+  .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
 
-    .nav-link{
-		font-size: 1rem;
-	}
+  .nav-link {
+    font-size: 1rem;
+  }
 
-	.auth-links{
-		display: none;
-	}
-	
-	.divider{
-		width: 100%;
-		border-top: 1px solid grey;
-	}
-	.signup-link{
-		background-color: white;
-		color: black;
-		padding: 0.5rem 5rem;
-	}
+  .auth-links {
+    display: none;
+  }
+
+  .divider {
+    width: 100%;
+    border-top: 1px solid grey;
+  }
+  .signup-link {
+    background-color: white;
+    color: black;
+    padding: 0.5rem 5rem;
+  }
 }
