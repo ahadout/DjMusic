@@ -1,0 +1,23 @@
+#Screenshots_Section_2_Container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Screenshots_Section_2_Container div h1 {
+  color: var(--secondary-color);
+  margin: 2rem 0 1rem 0;
+  font-size: 3rem;
+  width: 85%;
+  text-align: center;
+}
+#Screenshots_Section_2_Container div p {
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+  width: 85%;
+}
+#Screenshots_Section_2_Container > div img {
+  max-width: 70%;
+  margin: 1rem auto 4rem auto;
+}

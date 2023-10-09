@@ -1,0 +1,45 @@
+#About_Section_1_Container::before {
+  content: "";
+  background-image: url("../../images/closeup-male-hand-on-sound-mixer-console-2022-09-22-18-28-52-utc.jpg");
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+  background-position: center;
+  filter: brightness(50%);
+  display: inline-block;
+}
+
+#About_Section_1_Container h1 {
+  color: var(--secondary-color);
+  font-size: 5rem;
+}
+#About_Section_1_Container p {
+  color: var(--secondary-color);
+  font-size: 1.75rem;
+  margin-top: 0.5rem;
+}
+#About_Section_1_Container_info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+@media (max-width: 860px) {
+  #About_Section_1_Container h1 {
+    font-size: 5rem;
+  }
+  #About_Section_1_Container p {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #About_Section_1_Container h1 {
+    font-weight: 2rem;
+  }
+  #About_Section_1_Container p {
+    font-size: 1.25rem;
+  }
+}

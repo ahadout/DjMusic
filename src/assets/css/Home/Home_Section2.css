@@ -110,6 +110,9 @@
   }
 }
 @media (max-width: 480px) {
+  #home_section2 > h1 {
+    width: 90%;
+  }
   #home_section2 > p {
     font-size: 0.9rem;
     margin: 0.5rem auto 1.5rem auto;

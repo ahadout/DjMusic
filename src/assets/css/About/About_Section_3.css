@@ -1,0 +1,40 @@
+#About_Section3_Section {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 4rem 0;
+}
+#About_Section3_Section div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}
+#About_Section3_Section h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+#About_Section3_Section p {
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+}
+@media (max-width: 1024px) {
+  #About_Section3_Section h1 {
+    font-size: 3rem;
+  }
+  #About_Section3_Section p {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 860px) {
+  #About_Section3_Section h1 {
+    font-size: 2.25rem;
+  }
+  #About_Section3_Section p {
+    line-height: 2rem;
+    font-size: 1.25rem;
+  }
+}

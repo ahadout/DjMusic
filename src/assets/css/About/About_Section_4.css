@@ -1,0 +1,104 @@
+#About_Section4_Section {
+  display: flex;
+  justify-content: space-around;
+  margin: 5rem auto 0 auto;
+  padding: 5rem 0 9rem 0;
+  width: 80%;
+  margin: 0 auto;
+  gap: 3rem;
+}
+#About_Section4_Section div:first-of-type {
+  position: relative;
+}
+#About_Section4_Section div:first-of-type img:first-of-type {
+  width: 22rem;
+  height: 15rem;
+}
+#About_Section4_Section div:first-of-type img:nth-of-type(2) {
+  width: 14rem;
+  height: 10rem;
+  position: absolute;
+  top: 9rem;
+  left: 15rem;
+}
+#About_Section4_Section div:nth-of-type(2) {
+  color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+#About_Section4_Section div:nth-of-type(2) h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+#About_Section4_Section div:nth-of-type(2) p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+#About_Section4_Section div:nth-of-type(2) button {
+  background-color: #004eeb;
+  color: white;
+  border: none;
+  font-size: 1.25rem;
+  height: 3rem;
+  font-weight: 600;
+  width: 10rem;
+  margin-top: 1rem;
+}
+@media (max-width: 1140px) {
+  #About_Section4_Section {
+    align-items: center;
+  }
+  #About_Section4_Section div:first-of-type img:nth-of-type(2) {
+    top: 11rem;
+    left: 5rem;
+  }
+  #About_Section4_Section div:nth-of-type(2) h1 {
+    font-size: 3rem;
+  }
+  #About_Section4_Section div:nth-of-type(2) p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 860px) {
+  #About_Section4_Section {
+    margin: 0 auto;
+    flex-direction: column-reverse;
+  }
+  #About_Section4_Section div:first-of-type {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #About_Section4_Section div:first-of-type img:nth-of-type(2) {
+    top: 12rem;
+    left: 12rem;
+  }
+  #About_Section4_Section div:nth-of-type(2) {
+    margin-bottom: 1rem;
+  }
+  #About_Section4_Section div:nth-of-type(2) h1 {
+    font-size: 2.25rem;
+  }
+  #About_Section4_Section div:nth-of-type(2) p {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  #About_Section4_Section div:first-of-type img:nth-of-type(2) {
+    top: 7rem;
+    left: 2rem;
+  }
+  #About_Section4_Section div:first-of-type img:first-of-type {
+    width: 16rem;
+    height: 9rem;
+  }
+  #About_Section4_Section div:first-of-type img:nth-of-type(2) {
+    width: 11rem;
+    height: 8rem;
+    top: 6rem;
+    left: 2.5rem;
+  }
+}

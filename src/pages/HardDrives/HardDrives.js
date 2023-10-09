@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import HardDrives_Section1 from "./HardDrives_Section1";
