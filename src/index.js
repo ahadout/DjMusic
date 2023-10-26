@@ -8,6 +8,9 @@ import Screenshots from "./pages/Screenshots/Screenshots";
 import Preview from "./pages/Preview/Preview";
 import About from "./pages/About/About";
 import Login from "./pages/Login/Login";
+import Signup from "./pages/Signup/Signup";
+import ContactUs from "./pages/ContactUs/Contactus";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // If you decide to use lazy loading in the future:
@@ -25,7 +28,9 @@ ReactDOM.render(
           <Route path="/preview" element={<Preview />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+
           {/* If using a 404 page: */}
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
