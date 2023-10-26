@@ -1,0 +1,32 @@
+.Orders_number{
+    color: white;
+    margin-bottom: 15px;
+}
+
+.Orders_order_container{
+    background-color: white;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.Orders_order_image{
+    grid-column: 1/2;
+    margin: 20px;
+}
+.Orders_order_image #Order_product_card{
+    background-color: var(--primary-color);
+}
+.Orders_order_image #Order_product_card .Order_product_card_circle{
+    background-color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.Orders_order_image #Order_product_card .Order_product_card_circle img{
+    width: 50%;
+}
+
+.Orders_order_details_container{
+    color: black;
+}
