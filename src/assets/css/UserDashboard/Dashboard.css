@@ -1,6 +1,7 @@
 .Dashboard-container{
     margin-top: 100px;
     margin-bottom: 160px;
+    overflow: hidden;
 }
 
 .Dashboard-second-container{
@@ -61,4 +62,55 @@
 
 .Dashboard-list-content{
     color: white;
+}
+
+@media (max-width: 720px) {
+    .Dashboard-container{
+        margin-top: 40px;
+        margin-bottom: 140px;
+    }
+
+    .Dashboard-second-container{
+        width: 95%;
+    }
+
+    .Hello-user h1{
+        font-size: 2rem;
+    }
+
+    .Dashboard-bar{
+        margin-bottom: 40px;
+        padding: 8px;
+    }
+    .Dashboard-bar h2{
+        font-size: 18px;
+    }
+    
+    .Dashboard-list{
+        width: 90%;
+    }
+    .Dashboard-list ul li{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Dashboard-content{
+        column-gap: 10px;
+    }
+    .Dashboard-container{
+        margin-bottom: 100px;
+    }
+
+    .Dashboard-second-container{
+        width: 97%;
+    }
+
+    .Dashboard-list{
+        width: 95%;
+    }
+
+    .Dashboard-list ul li{
+        font-size: 14px;
+    }
 }
