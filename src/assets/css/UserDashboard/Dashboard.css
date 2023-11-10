@@ -95,9 +95,6 @@
 }
 
 @media (max-width: 480px) {
-    .Dashboard-content{
-        column-gap: 10px;
-    }
     .Dashboard-container{
         margin-bottom: 100px;
     }
