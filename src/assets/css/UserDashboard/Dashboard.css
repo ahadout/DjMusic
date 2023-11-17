@@ -1,0 +1,113 @@
+.Dashboard-container{
+    margin-top: 100px;
+    margin-bottom: 160px;
+    overflow: hidden;
+}
+
+.Dashboard-second-container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Hello-user{
+    width: 100%;
+    margin: 35px 0;
+}
+.Hello-user h1{
+    text-align: center;
+    color: white;
+    font-family: var(--font-family);
+    font-size: 3rem;
+}
+
+.Dashboard-bar{
+    width: 100%;
+    background-color: var(--primary-color);
+    margin-bottom: 50px;
+    padding: 10px;
+}
+.Dashboard-bar h2{
+    font-family: var(--font-family);
+    color: var(--secondary-color);
+}
+
+.Dashboard-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 72%;
+    column-gap: 30px;
+}
+.Dashboard-list{
+    width: 80%;
+}
+.Dashboard-list ul li{
+    list-style: none;
+    font-family: var(--font-family);
+    font-size: large;
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+}
+.Dashboard-list ul li:hover:not(.Dashboard-list-active){
+    background-color: rgba(255, 255, 255, 0.127);
+}
+.Dashboard-list ul li:not(.Dashboard-list-active){
+    color: var(--secondary-color);
+}
+.Dashboard-list-active{
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.Dashboard-list-content{
+    color: white;
+}
+
+@media (max-width: 720px) {
+    .Dashboard-container{
+        margin-top: 40px;
+        margin-bottom: 140px;
+    }
+
+    .Dashboard-second-container{
+        width: 95%;
+    }
+
+    .Hello-user h1{
+        font-size: 2rem;
+    }
+
+    .Dashboard-bar{
+        margin-bottom: 40px;
+        padding: 8px;
+    }
+    .Dashboard-bar h2{
+        font-size: 18px;
+    }
+    
+    .Dashboard-list{
+        width: 90%;
+    }
+    .Dashboard-list ul li{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Dashboard-container{
+        margin-bottom: 100px;
+    }
+
+    .Dashboard-second-container{
+        width: 97%;
+    }
+
+    .Dashboard-list{
+        width: 95%;
+    }
+
+    .Dashboard-list ul li{
+        font-size: 14px;
+    }
+}

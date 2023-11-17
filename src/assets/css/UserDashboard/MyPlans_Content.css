@@ -1,0 +1,141 @@
+.plans-list-container {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px;
+  }
+  
+  .plan-title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .song-table {
+    width: 100%;
+    margin-bottom: 20px;
+    table-layout: fixed;
+  }
+  
+  .song-table th,
+  .song-table td {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .song-table th {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .song-table td {
+    background-color: #252525;
+    color: #ddd;
+  }
+  
+  .song-table tr:nth-child(even) td {
+    background-color: #2e2e2e;
+  }
+  
+  .download-icon {
+    color: #00f;
+    cursor: pointer;
+  }
+
+  .listen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .listen-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+    padding: 0;
+  }
+  .listen-button:hover{
+    background: none;
+  }
+
+  progress {
+    width: 100%;
+    height: 5px; /* You can adjust as needed */
+    color: #00f; /* Color of the progress bar */
+    -webkit-appearance: none; /* Override default appearance */
+    appearance: none;
+  }
+
+  progress::-webkit-progress-bar {
+    background-color: #eee; /* Color of the background of the bar */
+  }
+  
+  progress::-webkit-progress-value {
+    background-color: #00f; /* Color of the progress indicator */
+  }
+  
+  /* For other browsers like Firefox */
+  progress::-moz-progress-bar {
+    background-color: #00f; /* Color of the progress indicator */
+  }
+  
+  .download-all-btn {
+    background-color: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .download-all-btn:hover {
+    background-color: #0056a3;
+  }
+  
+  .footer-note {
+    color: #aaa;
+    font-size: 0.8em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .song-table th,
+    .song-table td {
+      padding: 5px;
+      font-size: 0.8em;
+    }
+
+    .listen-button {
+        background: none;
+        border: none;
+        color: #00f;
+        cursor: pointer;
+    }
+  
+    .download-all-btn {
+      padding: 8px 15px;
+      width: auto;
+      font-size: 0.8em;
+    }
+  
+    .footer-note {
+      font-size: 0.7em;
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    .song-table-container {
+      overflow-x: auto;
+    }
+  }

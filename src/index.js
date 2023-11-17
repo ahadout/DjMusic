@@ -20,6 +20,7 @@ import ProductManagement from "./pages/Admin/ProductManagement";
 
 
 
+import UserDashboard from "./pages/UserDashboard/UserDashboard"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // If you decide to use lazy loading in the future:
@@ -46,9 +47,7 @@ ReactDOM.render(
           <Route path="/admin/users-management" element={<UserManagement/>}/>
           <Route path="/admin/orders-management" element={<OrdersManagement/>}/>
           <Route path="/admin/products-management" element={<ProductManagement/>}/>
-
-
-
+          <Route path="/dashboard" element={<UserDashboard />} />
           {/* If using a 404 page: */}
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>

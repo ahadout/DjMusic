@@ -1,0 +1,53 @@
+.membership_plan{
+    width: 90%;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    background-color: green;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+
+.product{
+    width: 90%;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+}
+.product a{
+    color: white;
+}
+.product a:hover{
+    color: grey;
+}
+
+@media (max-width: 1024px) {
+    .membership_plan{
+        font-size: 20px;
+    }
+
+    .product{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 720px) {
+    .membership_plan{
+        font-size: 18px;
+    }
+
+    .product{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .membership_plan{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .product{
+        font-size: 14px;
+    }
+}

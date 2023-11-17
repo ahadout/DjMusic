@@ -1,0 +1,32 @@
+.detail{
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.detail p{
+    font-size: 22px;
+    width: 30%;
+}
+
+.detail .label{
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .detail p{
+        font-size: 20px;
+        width: 40%;
+    }
+}
+
+@media (max-width: 720px) {
+    .detail p{
+        font-size: 18px;
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+
+}

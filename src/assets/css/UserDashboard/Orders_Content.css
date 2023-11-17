@@ -1,0 +1,159 @@
+.Orders_number{
+    color: white;
+    margin-bottom: 15px;
+}
+
+.Orders_order_container{
+    background-color: white;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 30% 67%;
+    column-gap: 30px;
+    padding: 40px 20px;
+}
+
+.Orders_order_image{
+    grid-column: 1/2;
+    margin: 0 20px;
+}
+.Orders_order_image #Order_product_card{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 45vh;
+    width: 15vw;
+}
+
+.Orders_order_image #Order_product_card .Order_product_card_circle img{
+    width: 12vw;
+}
+.Orders_order_image #Order_product_card p{
+    text-align: center;
+}
+
+.Orders_order_details_container .order-details{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+}
+.Orders_order_details_container .order-details h3{
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.Orders_order_details_container .order-details .order-detail{
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.Orders_order_details_container .order-details .order-detail strong{
+    color: grey;
+    margin-right: 5px;
+}
+.Orders_order_details_container .order-details .order-detail span{
+    color: black;
+}
+
+.Orders_order_details_container .order-details .order-buttons button:not(:last-child){
+    margin-right: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+}
+.Orders_order_details_container .order-details .order-buttons button:hover:not(:last-child){
+    cursor: pointer;
+    background-color: blue;
+}
+
+.Orders_order_details_container .order-details .order-buttons #refund{
+    color: black;
+    background: transparent;
+    border: none;
+    margin: 0 15px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .Orders_order_container{
+        padding: 20px 10px;
+    }
+
+    .Orders_order_image{
+        margin: 0;
+    }
+
+    .Orders_order_image #Order_product_card{
+        width: 100%;
+    }
+
+    .Orders_order_details_container .order-details h3{
+        font-size: 1.7rem;
+        margin-bottom: 15px;
+    }
+
+    .Orders_order_details_container .order-details .order-detail{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 720px) {
+    .Orders_order_image{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center !important;
+    }
+    .Orders_order_image #Order_product_card{
+        height: 35vh;
+        width: 100%;
+    }
+
+    .Orders_order_details_container .order-details h3{
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .Orders_order_details_container .order-details .order-detail{
+        font-size: 14px;
+    }
+
+    .Orders_order_details_container .order-details .order-buttons button:not(:last-child){
+        margin-right: 5px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    .Orders_order_details_container .order-details .order-buttons #refund{
+        margin: 0 8px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Orders_order_image{
+        display: none;
+    }
+
+    .Orders_order_details_container{
+        grid-column: 1/3;
+    }
+
+    .Orders_order_details_container .order-details h3{
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .Orders_order_details_container .order-details .order-detail{
+        font-size: 12px;
+    }
+
+    .Orders_order_details_container .order-details .order-buttons button:not(:last-child){
+        margin-right: 5px;
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+}
