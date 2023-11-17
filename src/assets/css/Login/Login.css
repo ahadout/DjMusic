@@ -45,7 +45,9 @@ body {
     width: 100%;
     margin-bottom: 1em;
     font-size: 1.2em;
+    color: #fff;
   }
+
   
   .login-input::placeholder {
     color: #fff;
@@ -66,7 +68,9 @@ body {
     cursor: pointer;
     font-size: 1.2em;
   }
-  
+  .login-button:hover {
+    border: solid 2px #fff;
+  }
   .login-signup-text {
     margin-top: 1em;
     font-size: 1em;

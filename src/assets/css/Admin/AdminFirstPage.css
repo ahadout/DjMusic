@@ -1,0 +1,260 @@
+.admin-panel {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25em;  /* Add a large bottom margin */
+}
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+    margin: 1em auto;
+}
+#AdminButton{
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 1em;
+    font-family: var(--font-family);
+    margin-right: 1em;
+    font-weight: 900;
+}
+.admin-header span {
+    margin-right: 20px;
+}
+.admin-panel h1{
+    font-family: var(--heading-font-family);
+    font-size: 3em;
+    font-weight: 500;
+}
+
+#logoutButton {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 900;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#logoutButton:hover {
+    background-color: #0066ff;
+    color: #fff;
+}
+.squareButton {
+    background-color: #fff;
+    color: #0066FF;
+    padding: 10px 15px;
+    font-weight: 900;
+    font-size: 0.5em;
+    font-family: var(--font-family);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.admin-sections {
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 250px));  /* Adjust the min and max width for the squares */
+    gap: 20px;
+    justify-content: center;  /* Center the grid on the page */
+}
+
+.section {
+    background-color: #0066ff;
+    font-size: 2em;
+    font-weight: bold;
+    display: flex;
+    align-items: center; /* Center the content-wrapper vertically */
+    justify-content: center; /* Center the content-wrapper horizontally */
+    position: relative;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+.squareText {
+    font-family: var(--heading-font-family);
+    font-weight: 500;
+    font-size: 1.5em;
+    margin-bottom: 0.3em;
+}
+.section::before {
+    content: "";
+    display: block;
+    padding-top: 100%; 
+}
+
+
+
+.section::before {
+    content: "";
+    display: block;
+    padding-top: 100%;  /* Maintain aspect ratio for square */
+}
+.hamburger {
+    cursor: pointer;
+    display: none; /* Initially hide the hamburger. Will show on mobile. */
+}
+
+.sidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    transition: left 0.3s;
+    position: relative;  /* Change from fixed to relative for desktop */
+    left: auto;
+    right: 0;
+}
+.close-btn {
+    display: none;
+}
+
+.admin-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #fff;
+    border: solid white 1px;
+    margin-top: 0.8em;
+    min-width: 160px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.dropdown-content button {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    background-color: #000;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--font-family);
+    font-size: 1em;
+    font-weight: 500;
+    width: 100%;
+    display: block;
+}
+
+/* Styles for mobile behavior */
+.mobile-hide {
+    display: none;
+}
+.mobile-tab {
+    display: none; /* Hide by default */
+    background-color: #000;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    font-weight: 900;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.mobile-tab:hover {
+    background-color: #0066ff;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .mobile-tab {
+        display: block;
+        position: absolute;
+        margin-top: 10em;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        color: #000;
+        padding: 10px 15px;
+        border: none;
+        font-weight: 900;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        z-index: 2; 
+    }
+
+    .admin-dropdown, #AdminButton {
+        display: none; /* Hide Admin dropdown on mobile */
+    }
+    #MobileAdminName {
+        display: block; /* Show only the Admin name */
+        color: #fff;
+    }
+    .admin-dropdown {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        display: none;
+    }
+    .admin-dropdown::before {
+        content: "Admin"; /* Display the admin name in place of button */
+        color: #fff;
+    }
+    .hamburger {
+        display: block;
+        font-size: 3em;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: auto;
+        right: -250px; 
+        width: 250px;
+        height: 100vh;
+        background-color: #000;
+        flex-direction: column;
+        padding: 2em 0;
+        z-index: 1;
+        justify-content: space-between;
+    }
+    #logoutButton{
+        align-self: stretch;
+    }
+    .admin-sections {
+        grid-template-columns: minmax(150px, 250px);
+        width: 95%;
+    }
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .admin-header span {
+        margin-bottom: 10px;
+    }
+    .close-btn {
+        position: absolute;
+        display: block;
+        top: 10px;
+        left: 10px;
+        font-size: 3em;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #fff;
+    }
+}

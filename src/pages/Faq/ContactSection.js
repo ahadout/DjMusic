@@ -1,19 +1,19 @@
 import React from 'react';
-import "../../assets/css/ContactUs/ContactForm.css";
+import "../../assets/css/Faq/faqForm.css";
 
-function ContactForm() {
+function faqForm() {
     return (
-        <div className="contact-form-container">
-            <div className="contact-form-heading">
-            <h1>TEXT US FOR FREE!</h1>
-            <p className='subheading'>Got something on your mind? We're all ears! Simply fill out the form below and shoot us a message.</p>
+        <div className="faq-form-container">
+            <div className="faq-form-heading">
+            <h1>Any Specific Questions?</h1>
+            <p className='subheading'>Find answers to commonly asked questions contact us now!</p>
             </div>
             <form>
                 <div className="input-group">
                     <label for="name">NAME</label>
                     <input type="text" id="name" placeholder="name"/>
                 </div>
-
+ 
                 <div className="input-group">
                     <label for="email">EMAIL</label>
                     <input type="email" id="email" placeholder="email"/>
@@ -32,4 +32,4 @@ function ContactForm() {
     );
 }
 
-export default ContactForm;
+export default faqForm;

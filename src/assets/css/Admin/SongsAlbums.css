@@ -1,0 +1,157 @@
+.songs-albums-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+  }
+  .songs-albums-container h2{
+    margin-bottom: 2em;
+    font-weight: 500;
+    font-family: var(--heading-font-family);
+    font-size: 3em;
+  }
+  .song-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    border-bottom: 1px solid #fff;
+    padding: 5px;
+    font-family: var(--font-family);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.song-actions {
+    display: flex;
+    align-items: center;
+}
+
+.play-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 5px;
+}
+
+.play-btn svg {
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+}
+
+  .album-header {
+    font-family: var(--font-family);
+    font-size: 1em;
+    font-weight: 500;
+
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+  
+  .albums-section, .songs-section {
+    width: 45%;
+  }
+  .albums-section h3{
+    font-weight: 500;
+    font-family: var(--heading-font-family);
+    font-size: 2em;
+    
+  }
+  .songs-section h3{
+    font-weight: 500;
+    font-family: var(--heading-font-family);
+    font-size: 2em;
+    
+  }
+  .album-item, .song-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    border-bottom: 1px solid #fff;
+  }
+  
+  .delete-btn {
+    background-color: #007BFF;
+    border: 1px solid #007BFF;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: var(--font-family);
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+  
+  .delete-btn:hover {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+  }
+  
+  .upload-btn {
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: var(--font-family);
+    font-size: 0.8em;
+    font-weight: 500;
+  }
+  
+  .upload-btn:hover {
+    background-color: #0056b3;
+  }
+  .album-container {
+    margin-bottom: 20px;
+}
+
+.album-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    padding: 5px 0;
+    cursor: pointer;
+}
+.album-header span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.arrow {
+    margin-left: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .albums-section, .songs-section {
+      width: 100%;
+    }
+    .albums-section {
+        margin-bottom: 3em;
+      }
+      
+  }

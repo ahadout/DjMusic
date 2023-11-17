@@ -1,0 +1,40 @@
+.faq-header {
+    background: url('../../images/dj-hands-on-buttons-1.jpg') no-repeat center center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    padding: 15em 0;
+    text-align: center;
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
+  
+  .faq-title {
+    font-size: 10em;
+    color: white;
+    margin: 0;
+    font-family: var(--heading-font-family);
+  }
+  
+  .faq-description {
+    font-size: 1.5em;
+    color: white;
+    max-width: 37em;
+    margin: 0 auto;
+    font-weight: 500;
+    font-family: var(--font-family);
+  }
+  
+  @media (max-width: 480px) { /* Mobile devices */
+    .contact-title {
+        font-size: 2em;
+    }
+  
+    .faq-description {
+        font-size: 1.2em;
+    }
+    .info-main-heading{
+      margin-top: 1em;
+    }
+  }
+  

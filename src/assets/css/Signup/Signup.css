@@ -51,6 +51,7 @@ body {
   width: 100%;
   margin-bottom: 1em;
   font-size: 1.2em;
+  color: #fff;
 }
 .signup-input::placeholder {
   color: #fff;
@@ -72,7 +73,9 @@ body {
   font-size: 1.2em;
 }
 
-
+.signup-button:hover{
+  border: solid 2px;
+}
 
 .signup-login-text {
   margin-top: 1em;
@@ -88,6 +91,14 @@ body {
 .signup-login-text a:hover {
   text-decoration: none;
 }
+.error-message {
+  color: #ff3860; /* Example color, adjust as needed */
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  text-align: left;
+  width: 100%;
+}
 .main-content-wrapper {
   padding-bottom: 60px; /* This should be the height of your footer to avoid overlapping content. Adjust as needed. */
 }
@@ -97,6 +108,13 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
+}
+.SuccessSvg{
+  width: 35%;
+}
+.signupSuccessMessage{
+  margin-bottom: 20px;
+  font-family: var(--font-family);
 }
 /* Adjust font size for mobile screens */
 @media (max-width: 480px) { /* This is a common breakpoint for mobile devices */

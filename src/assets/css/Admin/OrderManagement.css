@@ -1,0 +1,125 @@
+.order-management-container {
+    font-family: var(--font-family);
+    color: #fff;
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.order-management-container h1 {
+    font-family: var(--heading-font-family);
+    font-weight: 500;
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #222;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    text-align: center;
+}
+
+.order_management__edit-btn,
+.order_management__delete-btn {
+    background-color: #007BFF;
+    border: 1px solid #007BFF;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: var(--font-family);
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.order_management__edit-btn:hover,
+.order_management__delete-btn:hover {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+.order_management__crud-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.create-order-btn {
+    background-color: #007BFF;
+    border: 1px solid #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: var(--font-family);
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.create-order-btn:hover {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .order-management-container {
+        padding: 10px;
+    }
+
+    .order-management-container h1 {
+        font-size: 2em; /* Smaller font size for the heading */
+    }
+
+    table {
+        display: block;
+        overflow-x: auto; /* Allows table to scroll horizontally on small screens */
+    }
+
+    th, td {
+        white-space: nowrap; /* Ensures the content of table cells doesn't wrap */
+    }
+
+    .order_management__edit-btn,
+    .order_management__delete-btn {
+        font-size: 0.7em;
+        width: 35%;
+        padding: 5px;
+        margin: 2px 0;
+    }
+
+    .create-order-btn {
+        font-size: 0.9em;
+        padding: 8px 10px;
+        margin-top: 10px;
+    }
+
+    /* Adjust the cards for mobile view */
+    .user-card {
+        display: block;
+        text-align: left;
+    }
+
+    .user-card__field_crud_buttons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .user-card__field {
+        margin: 5px 0;
+    }
+}

@@ -10,6 +10,15 @@ import About from "./pages/About/About";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
 import ContactUs from "./pages/ContactUs/Contactus";
+import FaqPage from "./pages/Faq/FaqPage";
+import AdminPage from "./pages/Admin/adminPage";
+import AdminProfile from "./pages/Admin/AdminProfile";
+import SongsAlbums from "./pages/Admin/SongsAlbums";
+import UserManagement from "./pages/Admin/UserManagement";
+import OrdersManagement from "./pages/Admin/OrdersManagement";
+import ProductManagement from "./pages/Admin/ProductManagement";
+
+
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -30,6 +39,15 @@ ReactDOM.render(
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/faq" element={<FaqPage/>}/>
+          <Route path="/admin" element={<AdminPage/>}/>
+          <Route path="/admin/profile" element={<AdminProfile/>}/>
+          <Route path="/admin/songs-albums" element={<SongsAlbums/>}/>
+          <Route path="/admin/users-management" element={<UserManagement/>}/>
+          <Route path="/admin/orders-management" element={<OrdersManagement/>}/>
+          <Route path="/admin/products-management" element={<ProductManagement/>}/>
+
+
 
           {/* If using a 404 page: */}
           {/* <Route path="*" element={<NotFound />} /> */}

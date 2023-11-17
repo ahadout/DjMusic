@@ -1,0 +1,93 @@
+.admin-profile {
+    font-family: var(--font-family);
+    background-color: #000;
+    color: #fff;
+    padding: 40px;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.admin-profile h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-family: var(--heading-font-family);
+}
+
+.profile-details {
+    margin-bottom: 40px;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.detail:last-child {
+    margin-bottom: 0;
+}
+
+.label {
+    font-size: 18px;
+    opacity: 0.7;
+    font-family: var(--font-family);
+}
+
+.value {
+    font-size: 18px;
+    font-family: var(--font-family);
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+.edit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.edit-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+.value-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+    color: #fff;
+    font-size: 18px;
+    font-family: var(--font-family);
+    outline: none;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #fff;
+    border: none;
+    color: #000;
+    font-size: 18px;
+    font-family: var(--font-family);
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #ddd;
+}
