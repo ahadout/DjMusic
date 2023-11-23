@@ -1,5 +1,6 @@
 .Home-Section3-container{
     background-color: var(--primary-color);
+    overflow: hidden;
 }
 
 .Home-Section3-second-container{
