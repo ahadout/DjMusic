@@ -1,15 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import "../../src/assets/css/Components/AddToCartOrBuy.css";
+
 function AddToCartOrBuy(props) {
+
+  const [quantity, setQuantity] = useState(1);
+
   return (
     <div id="AddToCartOrBuy" class={props.class}>
-      {props.price && <span>{props.price}</span>}
+      {props.price && <span>${props.price * quantity}</span>}
       <div class="product-count">
-        <button>+</button>
-        <p>1</p>
-        <button>-</button>
+        <button onClick={() => {quantity > 1 ? setQuantity( quantity - 1) : setQuantity( quantity)}}>-</button>
+        <p>{quantity}</p>
+        <button onClick={() => {quantity < 10 ? setQuantity( quantity + 1) : setQuantity( quantity)}}>+</button>
       </div>
-      <button>ADD TO CART</button>
+      <button>Add To Cart</button>
       {props.isBuyExists && <button>BUY NOW</button>}
     </div>
   );

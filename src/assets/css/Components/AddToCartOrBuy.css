@@ -41,8 +41,6 @@
   color: white;
   font-weight: 500;
   font-size: 1.25rem;
-  height: 2rem;
-  width: 10rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
@@ -51,7 +49,5 @@
   color: white;
   border: none;
   font-size: 1.25rem;
-  height: 2rem;
   font-weight: 600;
-  width: 10rem;
 }

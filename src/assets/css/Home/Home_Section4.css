@@ -4,12 +4,14 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center 8rem;
-  padding-bottom: 14rem;
+  padding-bottom: 10rem;
+  width: 90%;
+  margin: 0 auto;
 }
 #home_section4 {
   display: flex;
-  justify-content: space-around;
-  max-width: 1000px;
+  justify-content: space-evenly;
+  /* max-width: 1000px; */
   margin: 5rem auto;
 }
 .Home_Section4_ProductCard_img {
