@@ -25,7 +25,6 @@ function Header() {
           <Link className='nav-link' to="/hard-drives">Hard drives</Link>
           <Link className='nav-link' to="/cloud-drives">Cloud drives</Link>
           <Link className='nav-link' to="/screenshots">Screenshots</Link>
-          <Link className='nav-link' to="/preview">Preview</Link>
           <Link className='nav-link' to="/about">About</Link>
           <span className='nav-btn divider'></span>
           <Link className='nav-link nav-btn' to="/login">Login</Link>
