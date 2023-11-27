@@ -1,18 +1,126 @@
-import React, { useState } from "react";
+// import React, { useState, useEffect } from "react";
+// import "../../src/assets/css/Components/AddToCartOrBuy.css";
+
+// function AddToCartOrBuy(props) {
+//   const [quantity, setQuantity] = useState(1);
+//   const [errorMessage, setErrorMessage] = useState('');
+//   const [product, setProduct] = useState(null);
+//   const [error, setError] = useState(null);
+//   const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
+//   useEffect(() => {
+//     const fetchProductData = async () => {
+//       try {
+//         const response = await fetch(`${backendUrl}/api/products/featured`);
+//         if (!response.ok) {
+//           throw new Error(`HTTP error! status: ${response.status}`);
+//         }
+//         const data = await response.json();
+//         setProduct(data);
+//       } catch (e) {
+//         setError(e.message);
+//       }
+//     };
+  
+//     fetchProductData();
+//   }, [backendUrl]);
+
+//   if (error) return console.log(`Error loading product: ${error}`);
+//   if (!product) return console.log("Loading...");
+
+//   const handleInputChange = (e) => {
+//     const value = parseInt(e.target.value, 10);
+//     if (isNaN(value) || value < 1) {
+//       setErrorMessage('You can order a min of 1 product');
+//       setQuantity(1);
+//     } else if (value > product.quantity_in_stock) {
+//       setErrorMessage(`You can only order a max of ${product.quantity_in_stock} products`);
+//       setQuantity(10);
+//     } else {
+//       setErrorMessage('');
+//       setQuantity(value);
+//     }
+//   };
+
+//   const increaseQuantity = () => {
+//     if (quantity < 10) {
+//       setQuantity(quantity + 1);
+//       setErrorMessage('');
+//     } else {
+//       setErrorMessage('*You can only order a max of 10 products');
+//     }
+//   };
+
+//   const decreaseQuantity = () => {
+//     if (quantity > 1) {
+//       setQuantity(quantity - 1);
+//       setErrorMessage('');
+//     } else {
+//       setErrorMessage('*You can order a min of 1 product');
+//     }
+//   };
+
+//   return (
+//     <div id="AddToCartOrBuy" className={props.class}>
+//       {props.price && <span>${props.price * quantity}</span>}
+//       <div className="product-count">
+//         <button onClick={decreaseQuantity}>-</button>
+//         <input type="number" value={quantity} onChange={handleInputChange} />
+//         <button onClick={increaseQuantity}>+</button>
+//       </div>
+//       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
+//       <button>Add To Cart</button>
+//       {props.isBuyExists && <button>BUY NOW</button>}
+//     </div>
+//   );
+// }
+
+// export default AddToCartOrBuy;
+
+import React, { useState, useEffect } from "react";
 import "../../src/assets/css/Components/AddToCartOrBuy.css";
 
 function AddToCartOrBuy(props) {
   const [quantity, setQuantity] = useState(1);
   const [errorMessage, setErrorMessage] = useState('');
+  const [product, setProduct] = useState(null);
+  const [error, setError] = useState(null);
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
+  useEffect(() => {
+    const fetchProductData = async () => {
+      try {
+        const response = await fetch(`${backendUrl}/api/products/featured`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setProduct(data);
+      } catch (e) {
+        setError(e.message);
+      }
+    };
+
+    fetchProductData();
+  }, [backendUrl]);
+
+  if (error) {
+    console.log(`Error loading product: ${error}`);
+    return <p>Error loading product</p>;
+  }
+  if (!product) {
+    console.log("Loading...");
+    return <p>Loading...</p>;
+  }
 
   const handleInputChange = (e) => {
     const value = parseInt(e.target.value, 10);
     if (isNaN(value) || value < 1) {
       setErrorMessage('You can order a min of 1 product');
       setQuantity(1);
-    } else if (value > 10) {
-      setErrorMessage('You can only order a max of 10 products');
-      setQuantity(10);
+    } else if (value > product.quantity_in_stock) {
+      setErrorMessage(`There is only ${product.quantity_in_stock} products left in stock`);
+      setQuantity(product.quantity_in_stock);
     } else {
       setErrorMessage('');
       setQuantity(value);
@@ -20,11 +128,11 @@ function AddToCartOrBuy(props) {
   };
 
   const increaseQuantity = () => {
-    if (quantity < 10) {
+    if (quantity < product.quantity_in_stock) {
       setQuantity(quantity + 1);
       setErrorMessage('');
     } else {
-      setErrorMessage('*You can only order a max of 10 products');
+      setErrorMessage(`There is only ${product.quantity_in_stock} products left in stock`);
     }
   };
 
@@ -33,13 +141,13 @@ function AddToCartOrBuy(props) {
       setQuantity(quantity - 1);
       setErrorMessage('');
     } else {
-      setErrorMessage('*You can order a min of 1 product');
+      setErrorMessage('You can order a min of 1 product');
     }
   };
 
   return (
     <div id="AddToCartOrBuy" className={props.class}>
-      {props.price && <span>${props.price * quantity}</span>}
+      {product.price && <span>${product.price * quantity}</span>}
       <div className="product-count">
         <button onClick={decreaseQuantity}>-</button>
         <input type="number" value={quantity} onChange={handleInputChange} />

@@ -11,8 +11,9 @@
 }
 
 .Home-Section3-second-container .section3-left{
-    padding: 50px;
-    width: 100%;
+    padding: 25px;
+    margin: auto;
+    width: 80%;
     color: white;
 }
 
@@ -20,12 +21,13 @@
     margin-bottom: 35px;
 }
 .section3-left-paragraph > *{
+    line-height: 24px;
     margin-bottom: 20px;
 }
 
 .Home-Section3-second-container .section3-left h1{
     font-size: 42px;
-    text-align: center;
+    text-align: left;
 }
 
 .Home-Section3-second-container .section3-left .mobile-image{
@@ -34,14 +36,12 @@
 
 .section3-left .order-button{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .section3-left .order-button .order-here{
     padding: 10px 20px;
     color: var(--primary-color);
+    background-color: var(--secondary-color);
     font-size: 28px;
     font-family: var(--heading-font-family);
     font-weight: var(--font-weight-bold);

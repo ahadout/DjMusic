@@ -69,6 +69,7 @@
   font-family: var(--font-family);
   font-weight: var(--font-weight-bold);
   transition: background-color 0.5s ease;
+  text-decoration: none;
 }
 
 .Home-Section1-box-btn:first-child{
@@ -81,6 +82,7 @@
 }
 .Home-Section1-box-btn:nth-child(2){
   background: transparent;
+  color: black;
 }
 .Home-Section1-box-btn:nth-child(2):hover{
   background-color: black;

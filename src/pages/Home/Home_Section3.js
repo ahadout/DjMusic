@@ -20,7 +20,7 @@ function Home_Section3() {
             </p>
           </div>
           <div className='order-button'>
-            <button className='order-here'>ORDER HERE</button>
+            <a href='/hard-drives'><button className='order-here'>ORDER HERE</button></a>
           </div>
         </div>
         <div className='section3-right'>

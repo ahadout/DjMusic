@@ -14,8 +14,8 @@ function Home_Section1() {
               <p>Discover, Preview, and<br></br>Own Your Favourite Beats!</p>
             </div>
             <div className='Home-Section1-box-btn-container'>
-              <button className='Home-Section1-box-btn'>Get Started</button>
-              <button className='Home-Section1-box-btn'>Learn More</button>
+              <a className='Home-Section1-box-btn' href='#home_section2'>Get Started</a>
+              <a className='Home-Section1-box-btn' href='/about'>Learn More</a>
             </div>
           </div>
         </div>

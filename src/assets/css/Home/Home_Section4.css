@@ -4,7 +4,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center 8rem;
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
   width: 90%;
   margin: 0 auto;
 }
@@ -21,6 +22,13 @@
 }
 #product_buy_addtocart {
   color: white;
+}
+#product_buy_addtocart #quantity-left-in-stock{
+  padding: 5px 15px;
+  margin-bottom: 10px;
+  background-color: red;
+  font-size: 18px;
+  font-weight: bolder;
 }
 #product_buy_addtocart h1 {
   margin-bottom: 2rem;

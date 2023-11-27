@@ -12,7 +12,7 @@ function Home_Section4() {
   useEffect(() => {
     const fetchProductData = async () => {
       try {
-        const response = await fetch(`${backendUrl}/api/products/1`); // Replace 123 with your product ID
+        const response = await fetch(`${backendUrl}/api/products/featured`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -22,7 +22,7 @@ function Home_Section4() {
         setError(e.message);
       }
     };
-
+  
     fetchProductData();
   }, [backendUrl]);
 
@@ -39,8 +39,13 @@ function Home_Section4() {
           imgClass="Home_Section4_ProductCard_img"
         />
         <div id="product_buy_addtocart">
+          {product.quantity_in_stock <= 3 && (
+            <div id="quantity-left-in-stock">
+              Only {product.quantity_in_stock} left
+            </div>
+          )}
           <h1>Get your 2TB Solid State Drive DJ!</h1>
-          <p>{product.description}</p> {/* Use product name */}
+          <p>{product.short_description}</p>
           <AddToCartOrBuy price={product.price} isBuyExists={true} />
         </div>
       </section>

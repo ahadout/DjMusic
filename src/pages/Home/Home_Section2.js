@@ -26,7 +26,7 @@ function Home_Section2() {
                 Embrace the Beat, Hold the Rhythm — Get Our DJ Albums on Viscal
                 Hard Drives!
               </p>
-              <button>Learn more</button>
+              <a href="/hard-drives"><button>Learn more</button></a>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@ function Home_Section2() {
                 Embrace the Beat, Hold the Rhythm — Get Our DJ Albums on Cloud
                 Drives!
               </p>
-              <button>Learn more</button>
+              <a href="/cloud-drives"><button>Learn more</button></a>
             </div>
           </div>
         </div>
