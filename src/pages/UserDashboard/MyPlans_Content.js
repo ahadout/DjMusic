@@ -97,36 +97,6 @@ function MyPlans_Content() {
     }));
   };
 
-  //Download Functionality
-  // const downloadSelectedSongs = async (planName) => {
-  //   const zip = new window.JSZip(); // Access JSZip from the global window object
-  //   const selected = selectedSongs[planName] || [];
-  
-  //   const plan = plans.find(p => p.plan === planName);
-  //   const songsToDownload = selected.length ? plan.songs.filter(s => selected.includes(s.song)) : plan.songs;
-  
-  //   for (let song of songsToDownload) {
-  //     try {
-  //       const response = await fetch(song.listen);
-  //       const blob = await response.blob();
-  //       zip.file(song.song, blob);
-  //     } catch (error) {
-  //       console.error("There was an error fetching the song:", error);
-  //     }
-  //   }
-  
-  //   zip.generateAsync({ type: "blob" }).then(content => {
-  //     const element = document.createElement("a");
-  //     const file = new Blob([content], { type: "application/zip" });
-  
-  //     element.href = URL.createObjectURL(file);
-  //     element.download = `${planName}.zip`;
-  //     document.body.appendChild(element); // Required for this to work in FireFox
-  //     element.click();
-  //     document.body.removeChild(element); // Clean up
-  //   });
-  // };
-
   const downloadSelectedSongs = async (planName) => {
     const zip = new window.JSZip(); // Access JSZip from the global window object
     const selected = selectedSongs[planName] || [];

@@ -1,7 +1,7 @@
 #Home_section5 {
   color: white;
   width: 90%;
-  margin: -3.5rem auto 5rem auto;
+  margin: auto auto 5rem auto;
 }
 #Home_section5 h1 {
   font-size: 2.5rem;
@@ -17,6 +17,10 @@
 #Home_section5_main {
   display: flex;
   justify-content: space-between;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px;
 }
 #Home_section5_main span {
   display: block;
@@ -40,14 +44,37 @@
   display: inline-block;
 }
 #Home_section5_main_categories h2 {
+  width: 100%;
   display: inline-block;
   font-size: 1.25rem;
   font-weight: 900;
   margin: 0.5rem 0;
 }
-#Home_section5_main_categories p {
-  font-size: 1.1rem;
+#Home_section5_main_categories h2::after{
+  content: '';
+  display: inline-block;
+  width: 30%;
+  height: 1px;
+  background: white;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+#Home_section5_main_categories li {
+  width: 45%;
+  font-size: 1.2rem;
+  font-weight: bolder;
   margin: 0.75rem 0;
+  padding: 7px 5px;
+  border-bottom: 1px solid grey;
+  list-style: none;
+  cursor: pointer;
+}
+#Home_section5_main_categories li:hover:not(.category-active){
+  background-color: rgba(255, 255, 255, 0.127);
+}
+.category-active{
+  background-color: white;
+  color: black;
 }
 #Home_section5_main div:nth-of-type(2) {
   justify-self: flex-end;
@@ -73,6 +100,10 @@
 }
 #Home_section5_main div:nth-of-type(2) span {
   font-size: 0.8rem;
+}
+
+.home-preview-tracks-container h2{
+  text-decoration: underline;
 }
 @media (max-width: 1000px) {
   #Home_section5 {
