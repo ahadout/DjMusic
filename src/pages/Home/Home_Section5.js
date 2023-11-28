@@ -76,7 +76,7 @@ function Home_Section5() {
           <h2>{activeCategory}</h2>
           {previewTracks.map((track, index) => (
             <div key={index}>
-              <p>Sample {index + 1}:</p>
+              <p id="preview-sample">Sample {index + 1}: </p>
               <span>{track.name}</span>
               <audio controls>
                 <source src={track.s3_url} type="audio/mpeg" />
@@ -86,7 +86,7 @@ function Home_Section5() {
         </div>
       </div>
       <hr />
-      <p>You can buy our music plans from here &rarr;</p>
+      <a href="/hard-drives"><button>You can buy our music plans from here &rarr;</button></a>
     </section>
   );
 }
