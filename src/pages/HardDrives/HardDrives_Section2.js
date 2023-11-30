@@ -5,7 +5,9 @@ import TwoTbDjComboMusic from "../../assets/images/2tb_dj_combo_music.png";
 import OneTbDJStandardMusic from "../../assets/images/1tb_DJ_standard_music.png";
 import ProductCard from "../../components/ProductCard";
 import AddToCartOrBuy from "../../components/AddToCartOrBuy";
+
 function HardDrives_Section2() {
+  
   return (
     <>
       <section id="HardDrives_Section2">

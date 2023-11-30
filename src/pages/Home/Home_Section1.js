@@ -6,7 +6,8 @@ function Home_Section1() {
 
   const handleScrollClick = (e) => {
     e.preventDefault();
-    scrollToElement('#home_section2');
+    const targetId = e.currentTarget.getAttribute('href');
+    scrollToElement(targetId);
   };
 
   return (
