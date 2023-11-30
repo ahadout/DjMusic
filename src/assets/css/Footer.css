@@ -62,8 +62,13 @@ footer {
 #pages-footer ul li {
   text-align: center;
 }
-#pages-footer ul li a {
-  display: inline;
+.footer-link{
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-link:hover{
+  color: #969696;
 }
 #pages-footer ul li:first-of-type {
   margin-bottom: 1rem;
@@ -121,10 +126,10 @@ footer {
   #pages-footer ul {
     margin-bottom: 1rem;
   }
-  #pages-footer ul li a {
+  /* #pages-footer ul li a {
     display: inline-block;
     margin-bottom: 0.3rem;
-  }
+  } */
   #join_us-footer p {
     font-size: 1rem;
   }

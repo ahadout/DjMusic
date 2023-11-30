@@ -9,7 +9,10 @@ import {
   faBehance,
   faTumblr,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
+
 function Footer() {
+
   return (
     <footer>
       <div class="container">
@@ -30,37 +33,36 @@ function Footer() {
             </i>
           </div>
         </div>
-        {/* <div id="join_us-footer">
-          <p>Join us and get the all our Updates!</p>
-          <div>
-            <label for="">Email</label>
-            <input id="email" placeholder="Your email here" />
-          </div>
-        </div> */}
         <Newsletter class="Footer_Newsletter" />
         <div id="pages-footer">
           <ul>
             <li>
-              <a>About us</a>
+              {/* <a href="#">About us</a> */}
+              <Link className='footer-link' to="/">Home</Link>
             </li>
             <li>
-              <a>FAQ</a>
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a>Our plans</a>
-            </li>
-            <li>
-              <a>Contact us</a>
+              {/* <a href="#">FAQ</a> */}
+              <Link className='footer-link' to="#">FAQ</Link>
             </li>
           </ul>
           <ul>
             <li>
-              <a>Hard drives</a>
+              {/* <a>Our plans</a> */}
+              <Link className='footer-link' to="/cloud-drives">Cloud Drives</Link>
             </li>
             <li>
-              <a>Preview</a>
+              {/* <a>Contact us</a> */}
+              <Link className='footer-link' to="#">Contact us</Link>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              {/* <a>Hard drives</a> */}
+              <Link className='footer-link' to="/hard-drives">Hard Drives</Link>
+            </li>
+            <li>
+              {/* <a>Preview</a> */}
+              <Link className='footer-link' to="#">Preview</Link>
             </li>
           </ul>
         </div>
