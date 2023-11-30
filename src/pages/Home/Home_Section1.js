@@ -1,7 +1,14 @@
 import React, {useState, useEffect, useRef} from 'react';
 import "../../assets/css/Home/Home_Section1.css";
+import scrollToElement from '../../components/scrollToElement';
 
 function Home_Section1() {
+
+  const handleScrollClick = (e) => {
+    e.preventDefault();
+    scrollToElement('#home_section2');
+  };
+
   return (
     <>
       <div className='Home-Section1-container'>
@@ -14,7 +21,7 @@ function Home_Section1() {
               <p>Discover, Preview, and<br></br>Own Your Favourite Beats!</p>
             </div>
             <div className='Home-Section1-box-btn-container'>
-              <a className='Home-Section1-box-btn' href='#home_section2'>Get Started</a>
+              <a className='Home-Section1-box-btn' href='#home_section2' onClick={handleScrollClick}>Get Started</a>
               <a className='Home-Section1-box-btn' href='/about'>Learn More</a>
             </div>
           </div>
