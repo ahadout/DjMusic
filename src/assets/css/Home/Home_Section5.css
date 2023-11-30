@@ -14,7 +14,7 @@
   margin-bottom: 1rem;
   color: white;
 }
-#Home_section5 button{
+#Home_section5 .bottom-link{
   background-color: #004eeb;
   color: white;
 }
@@ -26,7 +26,7 @@
   border-radius: 8px;
   margin: 20px;
 }
-#Home_section5_main span {
+#Home_section5_main .track-name {
   display: block;
 }
 #Home_section5_main audio {
@@ -95,20 +95,25 @@
   margin: 0.5rem 0;
 }
 #Home_section5_main div:nth-of-type(2) p,
-#Home_section5_main div:nth-of-type(2) span {
+#Home_section5_main div:nth-of-type(2) .track-name {
   margin: 0.5rem 0;
 }
 #Home_section5_main div:nth-of-type(2) p {
   font-size: 1.25rem;
   font-weight: 500;
 }
-#Home_section5_main div:nth-of-type(2) span {
+#Home_section5_main div:nth-of-type(2) .track-name {
   font-size: 0.8rem;
 }
 
 .home-preview-tracks-container h2{
   text-decoration: underline;
 }
+
+.samples-container{
+  width: 70%;
+}
+
 @media (max-width: 1000px) {
   #Home_section5 {
     max-width: 700px;
@@ -154,9 +159,12 @@
   #Home_section5_main > div:nth-of-type(2){
     margin-left: 1.5rem;
   }
-  #Home_section5_main > div:nth-of-type(2) div {
-    margin: 1.25rem 0;
+
+  .samples-container{
+    width: 100%;
+    margin-bottom: 35px;
   }
+
 }
 
 @media (max-width: 480px) {
@@ -187,16 +195,12 @@
     margin-top: 20px;
   }
 
-  .home-preview-tracks-container div {
-    margin-bottom: 15px;
-  }
-
   #Home_section5_main div:nth-of-type(2) p{
     font-size: 16px;
     display: inline-block;
   }
 
-  #Home_section5_main div:nth-of-type(2) span{
+  #Home_section5_main div:nth-of-type(2) .track-name{
     margin-left: 5px;
     font-size: 14px;
     display: inline-block;
@@ -206,5 +210,10 @@
   .category-active {
     font-weight: bolder;
     color: blue; /* Change as per your design */
+  }
+
+  .samples-container{
+    width: 100%;
+    margin-bottom: 20px;
   }
 }

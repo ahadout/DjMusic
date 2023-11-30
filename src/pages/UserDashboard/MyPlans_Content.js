@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import "../../assets/css/UserDashboard/MyPlans_Content.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlay, faCirclePause } from '@fortawesome/free-solid-svg-icons';
+import AudioPlayer from '../../components/AudioPlayer';
 
 function MyPlans_Content() {
 
@@ -29,55 +30,7 @@ function MyPlans_Content() {
     acc[plan.plan] = []; // Initialize an empty array for each plan
     return acc;
   }, {});
-  const [currentSong, setCurrentSong] = useState(null);
-  const audioRef = useRef(new Audio());
   const [selectedSongs, setSelectedSongs] = useState({});
-
-  useEffect(() => {
-    const audio = audioRef.current;
-  
-    const setAudioData = () => {
-      setCurrentSong(current => ({ ...current, duration: audio.duration }));
-    };
-  
-    const setAudioTime = () => {
-      setCurrentSong(current => ({ ...current, currentTime: audio.currentTime }));
-    };
-  
-    if (currentSong) {
-      audio.addEventListener('loadeddata', setAudioData);
-      audio.addEventListener('timeupdate', setAudioTime);
-    }
-  
-    return () => {
-      audio.removeEventListener('loadeddata', setAudioData);
-      audio.removeEventListener('timeupdate', setAudioTime);
-    };
-  }, [currentSong?.song]);
-
-  const playSong = (song) => {
-    const audio = audioRef.current;
-    const isCurrentSong = currentSong && song.song === currentSong.song;
-  
-    if (isCurrentSong && !audio.paused) {
-      audio.pause();
-      setCurrentSong(null); // Update state to reflect that nothing is playing
-    } else {
-      if (isCurrentSong) {
-        audio.play();
-      } else {
-        audio.src = song.listen;
-        audio.play();
-        setCurrentSong({ song: song.song, currentTime: 0, duration: 0 });
-      }
-    }
-  };
-
-  const getProgress = (song) => {
-    return currentSong && song.song === currentSong.song
-      ? (currentSong.currentTime / currentSong.duration) * 100
-      : 0;
-  };
 
   // Function to handle selection
   const toggleSongSelection = (planName, song) => {
@@ -173,22 +126,19 @@ function MyPlans_Content() {
                 <tbody>
                   {plan.songs.map((song, songIndex) => (
                     <tr key={songIndex}>
-                      <td>
+                      <td className='td-checkbox'>
                         <input
                           type="checkbox"
                           checked={selectedSongs[plan.plan] && selectedSongs[plan.plan].includes(song.song)}
                           onChange={() => toggleSongSelection(plan.plan, song)}
                         />
                       </td>
-                      <td>{song.song}</td>
-                      <td>{song.category}</td>
-                      <td className='listen'>
-                        <button onClick={() => playSong(song)} className='listen-button'>
-                        <FontAwesomeIcon icon={currentSong && currentSong.song === song.song && !audioRef.current.paused ? faCirclePause : faCirclePlay} />
-                        </button>
-                        <progress value={getProgress(song)} max="100"></progress>
+                      <td className='td-song'>{song.song}</td>
+                      <td className='td-category'>{song.category}</td>
+                      <td className='td-audioplayer'>
+                        <AudioPlayer src={song.listen} />
                       </td>
-                      <td>
+                      <td className='td-download'>
                       <a href={song.listen} className="download-icon" download target="_blank" rel="noopener noreferrer">
                         🔽
                       </a>

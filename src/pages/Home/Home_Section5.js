@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import "../../assets/css/Home/Home_Section5.css";
+import AudioPlayer from "../../components/AudioPlayer";
 
 function Home_Section5() {
 
@@ -32,11 +33,6 @@ function Home_Section5() {
 
     fetchTracks();
   }, [backendUrl]);
-
-  // useEffect(() => {
-  //   const categoryTracks = tracks.filter(track => track.category === activeCategory);
-  //   setPreviewTracks(categoryTracks.slice(0, 2)); // Take only the first two tracks
-  // }, [tracks, activeCategory]);
 
   useEffect(() => {
     const categoryTracks = tracks.filter(track => track.category === activeCategory && track.preview);
@@ -75,18 +71,19 @@ function Home_Section5() {
         <div className="home-preview-tracks-container">
           <h2>{activeCategory}</h2>
           {previewTracks.map((track, index) => (
-            <div key={index}>
+            <div key={index} className="samples-container">
               <p id="preview-sample">Sample {index + 1}: </p>
-              <span>{track.name}</span>
-              <audio controls>
+              <span className="track-name">{track.name}</span>
+              {/* <audio controls key={track.s3_url}>
                 <source src={track.s3_url} type="audio/mpeg" />
-              </audio>
+              </audio> */}
+              <AudioPlayer key={track.s3_url} src={track.s3_url} />
             </div>
           ))}
         </div>
       </div>
       <hr />
-      <a href="/hard-drives"><button>You can buy our music plans from here &rarr;</button></a>
+      <a href="/hard-drives"><button className="bottom-link">You can buy our music plans from here &rarr;</button></a>
     </section>
   );
 }
