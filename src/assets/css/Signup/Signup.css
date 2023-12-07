@@ -75,6 +75,7 @@ body {
 
 .signup-button:hover{
   border: solid 2px;
+  background-color: transparent;
 }
 
 .signup-login-text {
