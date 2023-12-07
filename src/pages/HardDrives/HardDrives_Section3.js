@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react";
 import ProductCard from "../../components/ProductCard";
 import AddToCartOrBuy from "../../components/AddToCartOrBuy";
+import "../../assets/css/HardDrives/HardDrives_Section3.css";
+import { Link } from "react-router-dom";
 import TwoTbCloud from "../../assets/images/1tb_cloud.png";
 import OneTbCloud from "../../assets/images/2tb_cloud.png";
-import "../../assets/css/HardDrives/HardDrives_Section3.css";
 
 function HardDrives_Section3() {
 
@@ -53,8 +54,8 @@ function HardDrives_Section3() {
           ))}
           <div className="HardDrives_Section3_ProductCard_Container">
             <div id="HardDrives_Section3_ProductCard_ShowMore">
-              <button>+</button>
-              <button>View more</button>
+              <Link to="/cloud-drives" className="HardDrives_ProductCard_ShowMore_btn"><button>+</button></Link>
+              <Link to="/cloud-drives" className="HardDrives_ProductCard_ShowMore_btn2"><button>View more</button></Link>
             </div>
           </div>
         </div>
