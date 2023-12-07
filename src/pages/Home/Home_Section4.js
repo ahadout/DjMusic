@@ -33,9 +33,9 @@ function Home_Section4() {
     <div id="home_section4_container">
       <section id="home_section4">
         <ProductCard
-          imgSrc={Sandik2tbSolidDisk} // Replace with dynamic data if needed
+          imgSrc={product.image} // Replace with dynamic data if needed
           imgAlt="Sandisk 2tb solid state"
-          description={product.name} // Use product data from API
+          name={product.name} // Use product data from API
           imgClass="Home_Section4_ProductCard_img"
         />
         <div id="product_buy_addtocart">
@@ -46,7 +46,7 @@ function Home_Section4() {
           )}
           <h1>Get your 2TB Solid State Drive DJ!</h1>
           <p>{product.short_description}</p>
-          <AddToCartOrBuy price={product.price} isBuyExists={true} />
+          <AddToCartOrBuy productId={"featured"} price={product.price} isBuyExists={true} />
         </div>
       </section>
     </div>

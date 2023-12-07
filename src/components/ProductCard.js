@@ -5,7 +5,7 @@ function ProductCard(props) {
     <div id="product_card" className={props.class}>
       <div className="product_card_circle"></div>
       <img src={props.imgSrc} alt={props.imgAlt} className={props.imgClass} />
-      <p dangerouslySetInnerHTML={{ __html: props.description }}></p>
+      <p dangerouslySetInnerHTML={{ __html: props.name }}></p>
     </div>
   );
 }
