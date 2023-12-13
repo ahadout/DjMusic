@@ -4,6 +4,7 @@ import image1 from "../../assets/images/stock-photo-dj-spinning-mixing-and-scrat
 import image2 from "../../assets/images/stock-photo-music-controller-mixer-dj-board-at-an-electronic-party.jpeg";
 import image3 from "../../assets/images/stock-photo-professional-sound-mixer-musical-events-hands-operator-background-colorful-light.jpeg";
 import Slider from "react-slick";
+import scrollToElement from "../../components/scrollToElement";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -28,10 +29,16 @@ function Screenshots_Section_1() {
     slidesToScroll: 1,
     initialSlide: 0,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 8000,
     afterChange: (current) => setCurrentSlide(current),
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+  };
+
+  const handleScrollClick = (e) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute('href');
+    scrollToElement(targetId);
   };
 
   return (
@@ -49,7 +56,7 @@ function Screenshots_Section_1() {
       </Slider>
       <div className="Screenshots_Section1_info">
         <h1>Discover our work from real screenshots!</h1>
-        <button>SHOW MORE</button>
+        <a href="#Screenshots_Section_2_Container" onClick={handleScrollClick}><button>SHOW MORE</button></a>
       </div>
     </div>
   );

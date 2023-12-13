@@ -30,6 +30,31 @@
 .Screenshots_Section_1_Slider img {
   filter: brightness(50%);
 }
+
+/* Custom Arrow Styling */
+.slick-arrow {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.slick-arrow::before{
+  color: white;
+
+}
+.slick-next{
+  right: 10px;
+}
+.slick-prev {
+  left: 10px; /* Additional adjustment for prev arrow */
+}
+
 /* This will be revised later  */
 /* .slick-arrow.slick-next {
   position: relative;
