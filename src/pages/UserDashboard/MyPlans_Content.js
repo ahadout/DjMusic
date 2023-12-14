@@ -30,7 +30,7 @@ function MyPlans_Content() {
     acc[plan.plan] = []; // Initialize an empty array for each plan
     return acc;
   }, {});
-  const [selectedSongs, setSelectedSongs] = useState({});
+  const [selectedSongs, setSelectedSongs] = useState(initialSelectedSongs);
 
   // Function to handle selection
   const toggleSongSelection = (planName, song) => {
