@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "../../assets/css/HardDrives/HardDrives_Section2.css";
 import SandiskTwotbSolidState from "../../assets/images/Sandisk 2tb solid state.png";
 import TwoTbDjComboMusic from "../../assets/images/2tb_dj_combo_music.png";
@@ -7,6 +7,26 @@ import ProductCard from "../../components/ProductCard";
 import AddToCartOrBuy from "../../components/AddToCartOrBuy";
 
 function HardDrives_Section2() {
+
+  const [hardDriveProducts, setHardDriveProducts] = useState([]);
+  const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
+  useEffect(() => {
+    const fetchHardDriveProducts = async () => {
+      try {
+        const response = await fetch(`${backendUrl}/api/products/hard_drives`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setHardDriveProducts(data);
+      } catch (e) {
+        console.error("Error fetching hard drive products: ", e);
+      }
+    };
+
+    fetchHardDriveProducts();
+  }, [backendUrl]);
   
   return (
     <>
@@ -19,45 +39,22 @@ function HardDrives_Section2() {
           </p>
         </div>
         <div class="HardDrives_Section2_Grid">
-          <div class="HardDrives_Section2_ProductCard_Container">
-            <ProductCard
-              imgSrc={TwoTbDjComboMusic}
-              imgAlt="2TB DJ Standard Music Cloud Drive"
-              description="2TB DJ Standard <br /> Music <br /> Cloud Drive"
-              imgClass="HardDrives_Section2_ProductCard_img"
-            />
-            <AddToCartOrBuy
-              price="299.99$"
-              class="center_AddToCartOrBuy"
-              isBuyExists={true}
-            />
-          </div>
-          <div class="HardDrives_Section2_ProductCard_Container">
-            <ProductCard
-              imgSrc={SandiskTwotbSolidState}
-              imgAlt="Sandisk 2tb solid state"
-              description="1TB DJ Standard <br /> Music <br /> Cloud Drive"
-              imgClass="HardDrives_Section2_ProductCard_img"
-            />
-            <AddToCartOrBuy
-              price="399.99$"
-              class="center_AddToCartOrBuy"
-              isBuyExists={true}
-            />
-          </div>
-          <div class="HardDrives_Section2_ProductCard_Container">
-            <ProductCard
-              imgSrc={OneTbDJStandardMusic}
-              imgAlt="2TB DJ Standard Music Cloud Drive"
-              description="2TB DJ Standard <br /> Music <br /> Cloud Drive"
-              imgClass="HardDrives_Section2_ProductCard_img"
-            />
-            <AddToCartOrBuy
-              price="349.99$"
-              class="center_AddToCartOrBuy"
-              isBuyExists={true}
-            />
-          </div>
+          {hardDriveProducts.map(product => (
+            <div key={product.id} className="HardDrives_Section2_ProductCard_Container">
+              <ProductCard
+                imgSrc={product.image}
+                imgAlt={product.name}
+                name={product.name}
+                imgClass="HardDrives_Section2_ProductCard_img"
+              />
+              <AddToCartOrBuy
+                productId={product.id}
+                price={`${product.price}$`}
+                class="center_AddToCartOrBuy"
+                isBuyExists={true}
+              />
+            </div>
+          ))}
         </div>
       </section>
     </>

@@ -16,7 +16,7 @@ function HardDrives_Section1() {
     <>
       <section id="HardDrives_Section1">
         <div class="HardDrives_Section1_container">
-          <h1>Get your Original Hard drive now!</h1>
+          <h1>Get your Original Hard Drive Now!</h1>
           <div>
             <div id="solid_drives_sec1">
               <img src={CloudPic} alt="cloud picture" />

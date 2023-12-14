@@ -73,7 +73,13 @@
 .CloudDrives_Section3_AddToCartOrBuy > button {
   height: 3rem !important;
 }
-#CloudDrives_Section3_ProductCard_ShowMore button:first-of-type {
+.CloudDrives_ProductCard_ShowMore_btn{
+  text-decoration: none;
+}
+.CloudDrives_ProductCard_ShowMore_btn2{
+  text-decoration: none;
+}
+.CloudDrives_ProductCard_ShowMore_btn button {
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
@@ -84,7 +90,7 @@
   font-size: 6rem;
   cursor: pointer;
 }
-#CloudDrives_Section3_ProductCard_ShowMore button:nth-of-type(2) {
+.CloudDrives_ProductCard_ShowMore_btn2 button {
   border: none;
   padding: 0.5rem 1rem;
   display: block;
