@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+#Preview_Section1 > * {
+  font-family: var(--heading-font-family);
+}
+#Preview_Section1 {
+  width: 100%;
+  height: 40rem;
+  position: relative;
+}
+#Preview_Section1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../../images/A-Quick-Introduction-to-DJ-Software-2.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  z-index: -1;
+}
+#Preview_Section1 h1 {
+  color: white;
+  font-size: 6rem;
+  letter-spacing: -2px;
+}
+.Preview_Section1_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+.Preview_Section1_container button{
+  margin-top: 35px;
+  display: inline-block;
+  border: none;
+  padding: 0.6rem 2.5rem;
+  font-size: 2rem;
+  background-color: #004eeb;
+  color: white;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  #Preview_Section1 h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 720px) {
+  .Preview_Section1_container {
+    flex-direction: column;
+  }
+  #Preview_Section1 h1 {
+    text-align: center;
+    font-size: 3rem;
+    width: 100%;
+  }
+  #solid_drives_sec1 button {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
+    left: 27%;
+    margin-top: 1rem;
+    z-index: 99;
+  }
+}
+@media (max-width: 480px) {
+  #Preview_Section1 {
+    height: 40rem;
+  }
+  #Preview_Section1 h1 {
+    font-size: 3rem;
+  }
+  #solid_drives_sec1 {
+    bottom: 2rem;
+    margin-bottom: 0;
+  }
+}

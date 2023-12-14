@@ -64,7 +64,7 @@ import App from "./App";
 import HardDrives from "./pages/HardDrives/HardDrives";
 import CloudDrives from "./pages/CloudDrives/CloudDrives";
 import Screenshots from "./pages/Screenshots/Screenshots";
-// import Preview from "./pages/Preview/Preview";
+import Preview from "./pages/Preview/Preview";
 import About from "./pages/About/About";
 import Login from "./pages/Login/Login";
 import Signup from "./pages/Signup/Signup";
@@ -98,6 +98,7 @@ const Index = () => {
         <Route path="/hard-drives" element={<HardDrives />} />
         <Route path="/cloud-drives" element={<CloudDrives />} />
         <Route path="/screenshots" element={<Screenshots />} />
+        <Route path="/preview" element={<Preview />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
