@@ -78,7 +78,8 @@ import OrdersManagement from "./pages/Admin/OrdersManagement";
 import ProductManagement from "./pages/Admin/ProductManagement";
 import useScrollToTop from "./components/useScrollToTop";
 
-
+import AdminProtectedRoute from './pages/Admin/AdminProtectedRoute';
+import UserProtectedRoute from './pages/UserDashboard/UserProtectedRoute';
 
 import UserDashboard from "./pages/UserDashboard/UserDashboard"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -101,13 +102,13 @@ const Index = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/faq" element={<FaqPage/>}/>
-        <Route path="/admin" element={<AdminPage/>}/>
+        <Route path="/admin" element={<AdminProtectedRoute><AdminPage /></AdminProtectedRoute>} />
         <Route path="/admin/profile" element={<AdminProfile/>}/>
         <Route path="/admin/songs-albums" element={<SongsAlbums/>}/>
         <Route path="/admin/users-management" element={<UserManagement/>}/>
         <Route path="/admin/orders-management" element={<OrdersManagement/>}/>
         <Route path="/admin/products-management" element={<ProductManagement/>}/>
-        <Route path="/dashboard" element={<UserDashboard />} />
+        <Route path="/dashboard" element={<UserProtectedRoute><UserDashboard /></UserProtectedRoute>} />
         {/* If using a 404 page: */}
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>

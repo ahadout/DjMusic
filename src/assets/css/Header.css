@@ -24,6 +24,12 @@
   align-items: center;
   gap: 15px; /* spacing between links */
 }
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* spacing between buttons */
+}
 .nav-link {
   color: var(--secondary-color);
   text-decoration: none;
@@ -31,6 +37,21 @@
   font-weight: var(--font-weight-bold);
   padding: 5px 10px;
   transition: 0.3s;
+}
+.profile{
+  background-color: white;
+color: black;
+text-decoration: none;
+font-size: 1.2vw;
+font-weight: var(--font-weight-bold);
+padding: 5px 10px;
+transition: 0.3s;
+
+}
+.profile:hover{
+  opacity: 0.8;
+  background-color: #fff;
+
 }
 .nav-link:hover {
   opacity: 0.8;
@@ -63,6 +84,8 @@
   opacity: 0;
   font-size: 1.8rem;
 }
+
+
 
 /* Small screens Responsive */
 @media screen and (min-width: 721px) and (max-width: 1024px) {

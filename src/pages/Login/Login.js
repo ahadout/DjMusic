@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import '../../assets/css/Login/Login.css'; 
@@ -8,6 +9,7 @@ function Login() {
   const apiUrl = process.env.REACT_APP_BACKEND_URL;
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({ email: '', password: '' });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,18 +20,17 @@ function Login() {
     e.preventDefault();
     try {
       const response = await axios.post(`${apiUrl}/api/auth/login`, formData);
-      // Handle login success
+      localStorage.setItem('token', response.data.token); // Store the token
+      localStorage.setItem('role', response.data.role); // Store the user's role
+
+      if (response.data.role === 'admin') {
+        navigate('/admin'); // Redirect to admin page
+      } else {
+        navigate('/'); // Redirect to home page
+      }
     } catch (error) {
       console.error('Login error:', error.response);
-      if (error.response && error.response.data) {
-        // Assume backend sends specific messages
-        const message = error.response.data.message;
-        if (message.includes("Email")) {
-          setErrors({ ...errors, email: message });
-        } else if (message.includes("password")) {
-          setErrors({ ...errors, password: message });
-        }
-      }
+      // Handle error
     }
   };
 
