@@ -83,6 +83,7 @@ import UserProtectedRoute from './pages/UserDashboard/UserProtectedRoute';
 
 import UserDashboard from "./pages/UserDashboard/UserDashboard"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AudioPlayerProvider } from "./components/AudioContext";
 
 // If you decide to use lazy loading in the future:
 // const App = React.lazy(() => import("./App"));
@@ -118,9 +119,11 @@ const Index = () => {
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <Index />
-    </Router>
+    <AudioPlayerProvider>
+      <Router>
+        <Index />
+      </Router>
+    </AudioPlayerProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

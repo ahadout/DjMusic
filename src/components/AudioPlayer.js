@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlay, faCirclePause } from '@fortawesome/free-solid-svg-icons';
 import { faVolumeHigh } from '@fortawesome/free-solid-svg-icons';
 import "../assets/css/UserDashboard/MyPlans_Content.css";
+import { useAudioPlayer } from '../components/AudioContext';
 
 function AudioPlayer({ src }) {
   const audioRef = useRef(new Audio(src));
@@ -13,41 +14,55 @@ function AudioPlayer({ src }) {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(0.1); // Default volume is 0.1 (10%)
+  const { currentSrc, playAudio, stopAudio } = useAudioPlayer();
 
   useEffect(() => {
     const audio = audioRef.current;
+    console.log("Audio source set to: ", src);
     audio.volume = volume;
 
     const setAudioTime = () => {
-      setCurrentTime(audio.currentTime);
-      setProgress((audio.currentTime / audio.duration) * 100);
+        setCurrentTime(audio.currentTime);
+        setProgress((audio.currentTime / audio.duration) * 100);
     };
 
     const setAudioDuration = () => {
-      setDuration(audio.duration);
+        setDuration(audio.duration);
     };
 
     audio.addEventListener('timeupdate', setAudioTime);
     audio.addEventListener('loadeddata', setAudioDuration);
 
-    if (isPlaying) {
-      audio.play();
+    // Check if this audio source should be playing
+    if (src === currentSrc) {
+      console.log("Playing audio: ", src);
+        audio.src = src; // Ensure the correct src is set
+        audio.play();
+        setIsPlaying(true);
+    } else {
+      console.log("Pausing audio: ", src);
+        audio.pause();
+        setIsPlaying(false);
     }
 
     return () => {
+      audio.pause();
+      console.log("Audio component unmounted, stopped playing: ", src);
       audio.removeEventListener('timeupdate', setAudioTime);
       audio.removeEventListener('loadeddata', setAudioDuration);
     };
-  }, [isPlaying, src, volume]);
+}, [currentSrc, src, volume]);
 
   const togglePlay = () => {
     const audio = audioRef.current;
     if (audio.paused) {
       audio.play();
-      setIsPlaying(true);
+      // setIsPlaying(true);
+      playAudio(src);
     } else {
       audio.pause();
-      setIsPlaying(false);
+      // setIsPlaying(false);
+      stopAudio();
     }
   };
 
